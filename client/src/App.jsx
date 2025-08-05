@@ -1,13 +1,19 @@
-import Footer from './Components/Footer'
-import Navbar from './Components/Navbar'
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Alumni from './pages/Alumni';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
+      <Routes>
+        <Route path="/alumni" element={<Alumni />} />
+        {/* Add other routes here as needed */}
+      </Routes>
       <Footer />
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default App
+export default App;
