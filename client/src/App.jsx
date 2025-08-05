@@ -1,3 +1,4 @@
+
 import { Routes, Route } from 'react-router-dom'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
@@ -16,5 +17,6 @@ const App = () => {
     </div>
   )
 }
+
 
 export default App;
