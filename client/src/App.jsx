@@ -4,7 +4,7 @@ import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import HomePage from './Pages/Home'
 import Hackoverflow from './User/Events/HackoverFlow/Hackoverflow';
-
+import Alumni from './Pages/Alumni';
 const App = () => {
   return (
     <div>
@@ -12,6 +12,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/hackoverflow" element={<Hackoverflow />} />
+          <Route path="/alumni" element={<Alumni />} />
         </Routes>
         <Footer />
     </div>
