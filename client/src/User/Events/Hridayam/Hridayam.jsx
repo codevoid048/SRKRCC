@@ -5,10 +5,16 @@ import { Card, CardContent } from '../../../Components/ui/card';
 import { Button } from '../../../Components/ui/button';
 import { Link } from "react-router-dom";
 import HridayamPastEvents from './PastHridayam';
+import ScrollToTopButton from '../../../Components/ScrollToTop';
 
 
 const Hridayam = () => {
-
+        useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, []); 
     return (
         <div>
             {/* Hero Section */}
@@ -106,7 +112,7 @@ const Hridayam = () => {
             </section>
 
             <HridayamPastEvents />
-
+            <ScrollToTopButton />
         </div>
     )
 }

@@ -6,6 +6,7 @@ import Hackoverflow from './User/Events/HackoverFlow/Hackoverflow';
 import { Routes, Route } from "react-router-dom";
 import IconCoderz from './User/Events/IconCoderz/Iconcoderz';
 import Hridayam from './User/Events/Hridayam/Hridayam';
+import Alumini from './Pages/Alumni';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/events/hackoverflow" element={<Hackoverflow />} />
           <Route path="/events/iconcoderz" element={<IconCoderz />} />
           <Route path="/events/hridayam" element={<Hridayam />} />
+          <Route path="/alumni" element={<Alumini />} />
         </Routes>
         <Footer />
     </div>
