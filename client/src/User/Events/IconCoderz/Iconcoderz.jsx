@@ -5,8 +5,15 @@ import { Button } from '../../../Components/ui/button'
 import { Link } from "react-router-dom";
 import PastIconCoderz from './PastIconcoderz';
 import FAQs from './FAQs';
+import ScrollToTopButton from '../../../Components/ScrollToTop';
 
 const IconCoderz = () => {
+        useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, []); 
     return (
         <div>
             {/* Hero Section */}
@@ -149,6 +156,8 @@ const IconCoderz = () => {
 
             {/* FAQs Section */}
             <FAQs />
+
+            <ScrollToTopButton />
         </div>
     )
 }

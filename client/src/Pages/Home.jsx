@@ -15,6 +15,7 @@ import {
   Quote,
   User,
 } from "lucide-react"
+import ScrollToTopButton from "../Components/ScrollToTop"
 
 // Counter component for animated numbers
 function Counter({ end, duration = 2000 }) {
@@ -425,9 +426,9 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{ animationDelay: '0.3s' }}>
             <Link
               to="/register"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center px-6 py-3 bg-accent text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Register Now <ArrowRight className="w-4 h-4 ml-2" />
+              Join Us <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link
               to="/contact"
@@ -509,6 +510,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ScrollToTopButton />
     </div>
   )
 }
