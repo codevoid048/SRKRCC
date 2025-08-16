@@ -23,27 +23,27 @@ const Hackoverflow = () => {
                     <div className="grid gap-8 md:grid-cols-2 md:items-center">
                         <div className="flex flex-col space-y-6">
                             <Badge className="w-fit bg-orange-500 text-white hover:bg-orange-600">Annual Hackathon</Badge>
-                            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">HackOverflow 2024</h1>
+                            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">HackOverflow 2K25</h1>
                             <p className="text-lg text-muted-foreground md:text-xl">
-                                48 hours of coding, innovation, and collaboration. Join us for our flagship hackathon event!
+                                24 hours of coding, innovation, and collaboration. Join us for our flagship hackathon event!
                             </p>
                             <div className="space-y-4 rounded-lg bg-muted/80 p-4">
                                 <div className="flex items-center gap-2 text-sm">
                                     <Calendar className="h-5 w-5 text-primary" />
-                                    <span>April 15-17, 2024</span>
+                                    <span>October 18-19, 2024</span>
                                 </div>
                                 <div className="flex items-center gap-2 text-sm">
                                     <MapPin className="h-5 w-5 text-primary" />
-                                    <span>SRKR Campus, Main Auditorium</span>
+                                    <span>SRKR Engineering College, Bhimavaram</span>
                                 </div>
                                 <div className="flex items-center gap-2 text-sm">
                                     <Users className="h-5 w-5 text-primary" />
-                                    <span>Teams of 1-4 participants</span>
+                                    <span>Teams of 1-6 participants</span>
                                 </div>
                             </div>
                             <div className="flex flex-wrap gap-4">
                                 <Button size="lg" asChild>
-                                    <Link href="#register">Register Now</Link>
+                                    <Link href="#register">Unfolding Soon…</Link>
                                 </Button>
                                 <Button variant="outline" size="lg" asChild>
                                     <Link href="#details">Learn More</Link>
@@ -217,13 +217,13 @@ const Hackoverflow = () => {
             <section id="register" className="py-16 md:py-24">
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-3xl text-center">
-                        <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Register for HackOverflow 2024</h2>
+                        <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Register for HackOverflow 2025</h2>
                         <p className="mb-8 text-lg text-muted-foreground">
-                            Ready to showcase your skills and creativity? Register now to secure your spot in HackOverflow 2024!
+                            Ready to showcase your skills and creativity? Register now to secure your spot in HackOverflow 2025!
                         </p>
                         <Button size="lg" asChild>
                             <Link href="https://forms.example.com/hackoverflow2024" target="_blank">
-                                Register Now
+                                Coming Soon!
                             </Link>
                         </Button>
                     </div>
