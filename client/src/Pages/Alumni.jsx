@@ -159,7 +159,7 @@ const Alumni = () => {
   }, [isFullScreen])
 
   return (
-    <div className="min-h-screen bg-muted/50">
+    <div className="min-h-screen bg-muted/40">
       {/* Full Screen Modal */}
       {isFullScreen && (
         <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center">
