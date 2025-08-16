@@ -37,7 +37,7 @@
 
 // export default App;
 import { Route, Routes, useLocation } from 'react-router-dom'
-import EventsPage from './Pages/Events/EventsPage'
+import EventsPage from './Pages/Events'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import HomePage from './Pages/Home'
@@ -46,6 +46,7 @@ import Alumni from './Pages/Alumni'
 import IconCoderz from './User/Events/IconCoderz/Iconcoderz'
 import Hridayam from './User/Events/Hridayam/Hridayam'
 import Affiliates from './Pages/Affiliates'
+import Registrations from './Pages/JoinUs'
 import TeamPage from './Pages/TeamPage'
 import Admin from './Admin/admin'
 
@@ -73,6 +74,7 @@ const App = () => {
             <Route path="/alumni" element={<Alumni />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/affiliates" element={<Affiliates />} />
+            <Route path="/Joinus" element={<Registrations />} />
           </Routes>
           <Footer />
         </>
