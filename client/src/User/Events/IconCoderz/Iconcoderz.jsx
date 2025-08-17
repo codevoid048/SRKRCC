@@ -9,16 +9,21 @@ import ScrollToTopButton from '../../../Components/ScrollToTop';
 import { useEffect } from 'react';
 
 const IconCoderz = () => {
-        useEffect(() => {
+    useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    }, []); 
+    }, []);
     return (
         <div>
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/50 py-16 md:py-24">
+                <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
+                    <div className="absolute top-40 right-20 w-16 h-16 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+                </div>
                 <div className="container mx-auto px-4">
                     <div className="grid gap-8 md:grid-cols-2 md:items-center">
                         <div className="flex flex-col space-y-6">
@@ -142,13 +147,13 @@ const IconCoderz = () => {
             <section id="register" className="py-16 md:py-24">
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-3xl text-center">
-                        <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Register for IconCoderz 2024</h2>
+                        <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Register for IconCoderz 2K26</h2>
                         <p className="mb-8 text-lg text-muted-foreground">
-                            Ready to take on the challenge? Register now to secure your spot in IconCoderz 2024!
+                            Ready to take on the challenge? Register now to secure your spot in IconCoderz 2K26!
                         </p>
                         <Button size="lg" asChild>
                             <Link href="https://forms.example.com/iconcoderz2024" target="_blank">
-                                Register Now
+                                Open Soon..... !
                             </Link>
                         </Button>
                     </div>

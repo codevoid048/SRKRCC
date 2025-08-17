@@ -44,9 +44,10 @@ const FAQs = () => {
             <section className="bg-muted/50 py-16 md:py-24">
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-3xl">
-                        <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
+                        <h2 className="mb-6 text-center text-3xl font-bold tracking-tight md:text-4xl">
                             Frequently Asked Questions
                         </h2>
+                        <div className="w-28 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-4"></div>
 
                         <Accordion type="single" collapsible className="w-full">
                             {faqs.map((faq, index) => (
