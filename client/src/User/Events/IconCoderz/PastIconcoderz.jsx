@@ -1,12 +1,27 @@
 import { useState, useRef, useEffect } from 'react';
-import { CalendarCheck, FileText, Trophy, Users, Image, Quote, Youtube, Link, Award } from 'lucide-react';
+import { CalendarCheck, FileText, Trophy, Users, Image, Quote, Youtube, Link, Award,MapPin,ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '../../../Components/ui/card';
+import { Button } from '../../../Components/ui/button';
 
+
+const hridayamGalleryImages = [
+    { id: 1, url: '/demo/Hridayam/photo1.jpg', alt: 'Event moment 1' },
+    { id: 2, url: '/demo/Hridayam/photo2.jpg', alt: 'Event moment 2' },
+    { id: 3, url: '/demo/Hridayam/photo3.jpg', alt: 'Event moment 3' },
+    { id: 4, url: '/demo/Hridayam/photo4.jpg', alt: 'Event moment 4' },
+    { id: 5, url: '/demo/Hridayam/photo5.jpg', alt: 'Event moment 5' },
+    { id: 6, url: '/demo/Hridayam/photo6.jpg', alt: 'Event moment 6' },
+    { id: 7, url: '/demo/Hridayam/photo7.jpg', alt: 'Event moment 7' },
+];
 // Sample data for different event editions. This data would typically be fetched from an API.
 const eventData = {
-    '2K23': {
-        title: 'IconCoderz 2K23',
+    '2K25': {
+        title: 'IconCoderz 2K25',
         description: 'A challenging competitive programming competition focused on advanced data structures and algorithms. The event brought together top student coders from across the region to solve complex problems under pressure.',
+        location: 'SRKR Engineering College, Bhimavaram.',
+        date: 'February 4th, 2K25',
+        team: 'Beginners and Experts',
+        gallerys:hridayamGalleryImages,
         winners: {
             expert: {
                 first: {
@@ -45,9 +60,13 @@ const eventData = {
         feedback: 'Participants rated the problem quality and event organization highly, with an average score of 4.7/5.',
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // A placeholder video link
     },
-    '2K22': {
-        title: 'CoderZ Battleground 2K22',
+    '2K24': {
+        title: 'CoderZ Battleground 2K24',
         description: 'Our inaugural coding competition, designed to spark interest in competitive programming. The event featured a mix of easy and medium-level problems, encouraging participation from all students.',
+        location: 'SRKR Engineering College, Bhimavaram.',
+        date: 'February 4th, 2024',
+        team: 'Beginners and Experts',
+        gallerys:hridayamGalleryImages,
         winners: {
             expert: {
                 first: {
@@ -85,10 +104,23 @@ const eventData = {
 };
 
 export default function PastIconCoderz() {
-    const [selectedEvent, setSelectedEvent] = useState('2K23');
+    const [selectedEvent, setSelectedEvent] = useState('2K25');
     const mainContentRef = useRef(null);
     const currentEvent = eventData[selectedEvent];
     const eventYears = Object.keys(eventData).sort((a, b) => b.localeCompare(a));
+
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isHovering, setIsHovering] = useState(false);
+
+    useEffect(() => {
+        let interval;
+        if (!isHovering) {
+            interval = setInterval(() => {
+                setActiveIndex((current) => (current + 1) % currentEvent.gallerys.length);
+            }, 3000);
+        }
+        return () => clearInterval(interval);
+    }, [isHovering, currentEvent.gallerys.length]);
 
     const handleEventSelect = (year) => {
         if (mainContentRef.current) {
@@ -99,21 +131,33 @@ export default function PastIconCoderz() {
         }
         setSelectedEvent(year);
     };
+        const handlePrev = () => {
+        setActiveIndex((current) => (current - 1 + currentEvent.gallerys.length) % currentEvent.gallerys.length);
+    };
+
+    const handleNext = () => {
+        setActiveIndex((current) => (current + 1) % currentEvent.gallerys.length);
+    };
+
+    const totalImages = currentEvent.gallerys.length;
+    const prevIndex = (activeIndex - 1 + totalImages) % totalImages;
+    const nextIndex = (activeIndex + 1) % totalImages;
 
     return (
-        <div className="min-h-screen bg-muted/50 text-foreground">
+        <div className="min-h-screen bg-muted/50 text-foreground mb-5">
             <div className="container mx-auto px-4 py-8">
                 <div className="mx-auto max-w-3xl text-center mb-6">
-                    <h1 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
+                    <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
                         Previous Editions
                     </h1>
+                    <div className="w-28 h-1 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-6"></div>
                     <p className="text-lg text-muted-foreground">
                         Our past competitions showcase a history of brilliant minds and challenging problems.
                     </p>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-6 py-8">
                 <div className="flex flex-col lg:flex-row gap-2">
                     {/* Sidebar for navigation */}
                     <aside className="lg:w-40 flex-shrink-0">
@@ -146,6 +190,20 @@ export default function PastIconCoderz() {
                                             <h2 className="text-2xl md:text-2xl font-bold">{currentEvent.title}</h2>
                                         </div>
                                         <p className="text-lg text-muted-foreground border-l-4 border-primary pl-4 py-2">{currentEvent.description}</p>
+                                        <div className="space-y-2 text-sm text-muted-foreground">
+                                            <div className="flex items-center gap-2">
+                                                <CalendarCheck className="h-5 w-5 text-red-500" />
+                                                <span>{currentEvent.date}</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <MapPin className="h-5 w-5 text-red-500" />
+                                                <span>{currentEvent.location}</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <Users className="h-5 w-5 text-red-500" />
+                                                <span>{currentEvent.team}</span>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     {/* Right side - Image */}
@@ -266,7 +324,7 @@ export default function PastIconCoderz() {
                             </section>
 
                             {/* Event Video Section */}
-                            <section className="mb-8">
+                            {/* <section className="mb-8">
                                 <h3 className="mb-4 text-xl font-bold flex items-center">
                                     <Youtube className="mr-2 text-red-500" />
                                     Event Video
@@ -281,6 +339,67 @@ export default function PastIconCoderz() {
                                             allowFullScreen
                                         ></iframe>
                                     </div>
+                                </div>
+                            </section> */}
+                            <section className="mb-8">
+                                <h3 className="mb-4 text-xl font-bold flex items-center">
+                                    <Image className="mr-2 text-red-500" />
+                                    Event Gallery
+                                </h3>
+                                <div
+                                    className="relative overflow-hidden w-full flex justify-center items-center h-[200px] sm:h-[250px] md:h-[300px]"
+                                    onMouseEnter={() => setIsHovering(true)}
+                                    onMouseLeave={() => setIsHovering(false)}
+                                >
+                                    {/* Navigation buttons for small screens */}
+                                    <div className="absolute top-1/2 -translate-y-1/2 left-4 z-30 lg:hidden">
+                                        <Button size="icon" variant="outline" onClick={handlePrev}>
+                                            <ChevronLeft />
+                                        </Button>
+                                    </div>
+                                    <div className="absolute top-1/2 -translate-y-1/2 right-4 z-30 lg:hidden">
+                                        <Button size="icon" variant="outline" onClick={handleNext}>
+                                            <ChevronRight />
+                                        </Button>
+                                    </div>
+
+                                    {currentEvent.gallerys.map((image, index) => {
+                                        let transformStyle;
+                                        let zIndex = 10;
+                                        let opacity = 0;
+
+                                        if (index === prevIndex) {
+                                            transformStyle = 'translateX(calc(-50% - 250px)) scale(0.6)';
+                                            zIndex = 10;
+                                            opacity = 1;
+                                        } else if (index === activeIndex) {
+                                            transformStyle = 'translateX(-50%) scale(1.0)';
+                                            zIndex = 20;
+                                            opacity = 1;
+                                        } else if (index === nextIndex) {
+                                            transformStyle = 'translateX(calc(-50% + 250px)) scale(0.6)';
+                                            zIndex = 10;
+                                            opacity = 1;
+                                        } else {
+                                            transformStyle = 'translateX(-50%) scale(0.6)';
+                                            zIndex = 0;
+                                            opacity = 0;
+                                        }
+
+                                        return (
+                                            <img
+                                                key={image.id}
+                                                src={image.url}
+                                                alt={image.alt}
+                                                className={`absolute top-0 left-1/2 w-auto h-full aspect-[16/9] object-cover transition-all duration-[2000ms] ease-in-out shadow-lg ${index === activeIndex ? 'rounded-none' : 'rounded-xl'}`}
+                                                style={{
+                                                    transform: transformStyle,
+                                                    zIndex: zIndex,
+                                                    opacity: opacity,
+                                                }}
+                                            />
+                                        );
+                                    })}
                                 </div>
                             </section>
                         </div>

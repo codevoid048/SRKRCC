@@ -35,7 +35,7 @@ const mockAllEvents = [
         location: "SRKR Engineering College, Bhimavaram",
         status: "upcoming",
         category: "Competition",
-        poster: "/placeholder.svg?height=100&width=300",
+        poster: "demo/EventPosters/iconcoderz-2k25.png",
     },
     {
         id: 3,
@@ -81,7 +81,7 @@ const mockFlagshipEvents = [
         title: "HackOverFlow",
         description:
             "HackOverflow is our annual 24-hour hackathon where participants collaborate to turn ideas into impactful solutions. With mentorship, workshops, networking opportunities, and a vibrant coding environment, it’s a space to learn, build, and showcase talent while creating innovative solutions to real-world problems",
-        poster: "/placeholder.svg?height=400&width=600",
+        poster: "demo/EventPosters/iconcoderz-2k25.png",
         category: "Hackathon",
         details: [
             "24-hour coding hackathon",
@@ -93,7 +93,7 @@ const mockFlagshipEvents = [
         title: "IconCoderZ",
         description:
             "A competitive programming contest designed to test coding skills and problem-solving abilities. With beginner and expert categories, it challenges participants to think critically, code efficiently, and win exciting prizes.",
-        poster: "/placeholder.svg?height=400&width=600",
+        poster: "demo/EventPosters/iconcoderz-2k25.png",
         category: "Competitive Programming",
         details: [
             "Individual competition",
@@ -106,7 +106,7 @@ const mockFlagshipEvents = [
         title: "Hridayam",
         description:
             "Hridayam is a social service initiative by our club members, dedicated to giving back to the community and making a positive impact through compassion and service.",
-        poster: "/placeholder.svg?height=400&width=600",
+        poster: "demo/EventPosters/iconcoderz-2k25.png",
         category: "social service",
         details: [
             "Community Service Activities led by Club Members",
@@ -245,7 +245,7 @@ const AllEventsSection = ({ events }) => {
                                         <img
                                             src={event.poster || "/placeholder.svg"}
                                             alt={event.title}
-                                            className="w-full h-64 object-cover"
+                                            className="w-full h-64"
                                         />
                                         {/* Event Status Badge */}
                                         <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -325,12 +325,12 @@ const FlagshipEventsSection = ({ events }) => {
                 </h2>
                 
                 <div className="w-28 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-12"></div>
-                <div className="space-y-16">
+                <div className="space-y-32">
                     
                     {events.map((event, index) => (
                         <div
                             key={event.title}
-                            className="grid gap-8 md:grid-cols-2 md:items-center"
+                            className="grid gap-8 md:grid-cols-2 md:items-center mb-12"
                         >
                             
                             <div
@@ -340,7 +340,7 @@ const FlagshipEventsSection = ({ events }) => {
                                 
                                 <h3 className="mb-4 text-5xl font-bold">{event.title}</h3>
                                 
-                                <p className="mb-6 text-md text-foreground">{event.description}</p>
+                               <p className="mb-6 text-md text-foreground">{event.description}</p>
                                 <ul className="mb-6 text-md space-y-2">
                                     {event.details && event.details.length > 0 ? (
                                         event.details.map((detail, i) => (
@@ -367,7 +367,7 @@ const FlagshipEventsSection = ({ events }) => {
                                     alt={event.title}
                                     width="600"
                                     height="400"
-                                    className="roundedobject-cover w-full h-100"
+                                    className="roundedobject-cover w-full h-100 border rounded-lg border-accent"
                                 />
                             </div>
                         </div>

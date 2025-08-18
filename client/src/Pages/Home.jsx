@@ -94,7 +94,7 @@ export default function HomePage() {
                   Explore Events
                 </Link>
                 <Link
-                  to="/join"
+                  to="/joinus"
                   className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-accent hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Join Us
@@ -137,10 +137,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Users, number: "300", label: "ABR" },
-              { icon: Users, number: "50", label: "EBR" },
-              { icon: Code, number: "50", label: "Events" },
-              { icon: Trophy, number: "30", label: "Awards" },
+              { icon: Users, number: "", label: "" },
+              { icon: Users, number: "80", label: "EBR & ABR's" },
+              { icon: Code, number: "30", label: "Events & Workshops" },
+              { icon: Trophy, number: "50", label: "Recognitions & Awards" },
             ].map((stat, index) => (
               <div key={index} className="bg-background rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-primary/20 reveal" style={{ animationDelay: `${index * 0.1}s` }}>
                 <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -163,6 +163,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               About <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Us</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               SRKR Coding Club is a student-led organization dedicated to fostering a culture of coding excellence and innovation at SRKR Engineering College.
             </p>
@@ -173,17 +174,17 @@ export default function HomePage() {
               {
                 icon: Lightbulb,
                 title: "Our Vision",
-                description: "To create a vibrant community of coders who can solve real-world problems through technology and innovation."
+                description: "To motivate and empower students by fostering a culture of learning, collaboration, and innovation, creating a community where they grow together and inspire others."
               },
               {
                 icon: Rocket,
                 title: "Our Mission",
-                description: "To provide a platform for students to learn, practice, and showcase their coding skills through various events and initiatives."
+                description: "Our mission is to empower students to learn and apply technology, organize projects and events that enhance skills and creativity, and build a supportive community for growth and positive impact."
               },
               {
                 icon: Shield,
                 title: "Our Values",
-                description: "Collaboration, innovation, continuous learning, and excellence in everything we do."
+                description: "we value learning, creativity, collaboration, integrity, and inclusivity, guiding our community to grow, innovate, and make a meaningful impact."
               }
             ].map((item, index) => (
               <div key={index} className="bg-muted/30 rounded-lg p-6 text-center hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-primary/20 reveal" style={{ animationDelay: `${index * 0.2}s` }}>
@@ -208,38 +209,37 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               Event <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Spotlight</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
           </div>
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-8 reveal">
             <div className="bg-background rounded-lg p-1 shadow-sm border border-primary/20">
-              <button
-                onClick={() => setActiveTab('ongoing')}
-                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${
-                  activeTab === 'ongoing'
-                    ? 'bg-primary text-primary-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                Ongoing Events
-              </button>
+              
               <button
                 onClick={() => setActiveTab('upcoming')}
-                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${
-                  activeTab === 'upcoming'
-                    ? 'bg-primary text-primary-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'upcoming'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+                  }`}
               >
                 Upcoming Events
               </button>
               <button
+                onClick={() => setActiveTab('ongoing')}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'ongoing'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+                  }`}
+              >
+                Ongoing Events
+              </button>
+              <button
                 onClick={() => setActiveTab('flagship')}
-                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${
-                  activeTab === 'flagship'
-                    ? 'bg-primary text-primary-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'flagship'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+                  }`}
               >
                 Flagship Events
               </button>
@@ -252,15 +252,15 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "HackOverflow 2024",
+                    title: "HackOverflow 2K25",
                     image: "/placeholder.svg",
                     status: "Ongoing",
                     statusColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
-                    date: "June 15-17, 2024",
+                    date: "October 18, 2025",
                     description: "Join our flagship hackathon event and showcase your innovative solutions to real-world problems."
                   },
                   {
-                    title: "IconCoderZ Spring Challenge",
+                    title: "IconCoderZ",
                     image: "/placeholder.svg",
                     status: "Ongoing",
                     statusColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
@@ -293,11 +293,11 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "Code BattleGround",
+                    title: "HackOverFlow 2K25",
                     image: "/placeholder.svg",
                     status: "Upcoming",
                     statusColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
-                    date: "June 30, 2024",
+                    date: "October 18, 2025",
                     description: "A team-based coding competition where groups compete to solve algorithmic challenges."
                   },
                   {
@@ -339,17 +339,17 @@ export default function HomePage() {
                   {
                     title: "HackOverflow",
                     image: "/placeholder.svg",
-                    status: "Annual Event",
+                    status: "Annual Hackathon Event",
                     statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
-                    nextEvent: "Next Event: April 15-17, 2025",
+                    nextEvent: "Next Event: October, 2025",
                     description: "Our annual hackathon where participants collaborate to create innovative solutions to real-world problems. Join us for 48 hours of coding, learning, and networking."
                   },
                   {
                     title: "IconCoderZ",
                     image: "/placeholder.svg",
-                    status: "Competition Series",
+                    status: "Coding Competition Series",
                     statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
-                    nextEvent: "Next Event: May 9, 2025",
+                    nextEvent: "Next Event: February, 2025",
                     description: "A competitive programming contest designed to test your coding skills and problem-solving abilities. Participate in beginner and expert categories."
                   }
                 ].map((event, index) => (
@@ -403,6 +403,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               What Our Members <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Say</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -487,6 +488,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               Contact <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Us</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
             <p className="text-xl text-muted-foreground">
               Have questions or want to get involved? Reach out to us!
             </p>
@@ -502,18 +504,32 @@ export default function HomePage() {
               {
                 icon: Mail,
                 title: "Email",
-                content: "contact@srkrcodingclub.org"
+                content: [
+                  "srkrcodingclubofficial@gmail.com",
+                  "davidrajukuppala@srkrec.ac.in",
+                  "events.srkrcodingclub@gmail.com"
+                ]
               },
               {
                 icon: Phone,
                 title: "Phone",
-                content: "+91 1234567890"
+                content:  [
+                  "+91 8121702286",
+                  "contact.srkrcodingclub@gmail.com",
+                  "events.srkrcodingclub@gmail.com"
+                ]
               }
             ].map((contact, index) => (
               <div key={index} className="bg-background rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-primary/20 dark:border-primary/10 reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-                <contact.icon className="w-8 h-8 text-primary mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">{contact.title}</h3>
-                <p className="text-muted-foreground">{contact.content}</p>
+                <contact.icon className="w-8 h-8 text-primary mx-auto mb-1" />
+                <h3 className="text-xl font-bold mb-2">{contact.title}</h3>
+                {Array.isArray(contact.content) ? (
+                  contact.content.map((email, i) => (
+                    <p key={i} className="text-muted-foreground">{email}</p>
+                  ))
+                ) : (
+                  <p className="text-muted-foreground">{contact.content}</p>
+                )}
               </div>
             ))}
           </div>
