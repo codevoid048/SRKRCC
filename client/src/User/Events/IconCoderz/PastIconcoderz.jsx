@@ -1,17 +1,16 @@
 import { useState, useRef, useEffect } from 'react';
-import { CalendarCheck, FileText, Trophy, Users, Image, Quote, Youtube, Link, Award,MapPin,ChevronLeft, ChevronRight } from 'lucide-react';
+import { CalendarCheck, FileText, Trophy, Users, Image, Quote, Youtube, Link, Award, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '../../../Components/ui/card';
 import { Button } from '../../../Components/ui/button';
 
 
-const hridayamGalleryImages = [
-    { id: 1, url: '/demo/Hridayam/photo1.jpg', alt: 'Event moment 1' },
-    { id: 2, url: '/demo/Hridayam/photo2.jpg', alt: 'Event moment 2' },
-    { id: 3, url: '/demo/Hridayam/photo3.jpg', alt: 'Event moment 3' },
-    { id: 4, url: '/demo/Hridayam/photo4.jpg', alt: 'Event moment 4' },
-    { id: 5, url: '/demo/Hridayam/photo5.jpg', alt: 'Event moment 5' },
-    { id: 6, url: '/demo/Hridayam/photo6.jpg', alt: 'Event moment 6' },
-    { id: 7, url: '/demo/Hridayam/photo7.jpg', alt: 'Event moment 7' },
+const iconcoderzGalleryImages = [
+    { id: 1, url: '/demo/Iconcoderz/photo1.jpg', alt: 'Participants coding' },
+    { id: 2, url: '/demo/Iconcoderz/photo2.jpg', alt: 'Awards ceremony' },
+    { id: 3, url: '/demo/Iconcoderz/photo3.jpg', alt: 'Judges' },
+    { id: 4, url: '/demo/Iconcoderz/photo4.jpg', alt: 'Team photo' },
+    { id: 5, url: '/demo/Iconcoderz/photo5.jpg', alt: 'Coding in action' },
+    
 ];
 // Sample data for different event editions. This data would typically be fetched from an API.
 const eventData = {
@@ -21,7 +20,8 @@ const eventData = {
         location: 'SRKR Engineering College, Bhimavaram.',
         date: 'February 4th, 2K25',
         team: 'Beginners and Experts',
-        gallerys:hridayamGalleryImages,
+        poster: '/demo/EventPosters/iconcoderz-2k25.png',
+        gallerys: iconcoderzGalleryImages,
         winners: {
             expert: {
                 first: {
@@ -61,12 +61,13 @@ const eventData = {
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // A placeholder video link
     },
     '2K24': {
-        title: 'CoderZ Battleground 2K24',
+        title: 'IconcoderZ 2K24',
         description: 'Our inaugural coding competition, designed to spark interest in competitive programming. The event featured a mix of easy and medium-level problems, encouraging participation from all students.',
         location: 'SRKR Engineering College, Bhimavaram.',
         date: 'February 4th, 2024',
         team: 'Beginners and Experts',
-        gallerys:hridayamGalleryImages,
+        poster: '/demo/EventPosters/iconcoderz-2k24.jpg',
+        gallerys: iconcoderzGalleryImages,
         winners: {
             expert: {
                 first: {
@@ -131,7 +132,7 @@ export default function PastIconCoderz() {
         }
         setSelectedEvent(year);
     };
-        const handlePrev = () => {
+    const handlePrev = () => {
         setActiveIndex((current) => (current - 1 + currentEvent.gallerys.length) % currentEvent.gallerys.length);
     };
 
@@ -209,7 +210,7 @@ export default function PastIconCoderz() {
                                     {/* Right side - Image */}
                                     <div className="aspect-video w-full rounded-lg overflow-hidden border bg-muted">
                                         <img
-                                            src="/demo/Iconcoderz/photo6.jpg"
+                                            src={currentEvent.poster}
                                             alt={`${currentEvent.title} event image`}
                                             className="w-full h-full object-cover"
                                         />

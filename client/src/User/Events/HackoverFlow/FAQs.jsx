@@ -10,7 +10,7 @@ const FAQs = () => {
         {
             question: "Who can participate in HackOverflow?",
             answer:
-                "HackOverflow is open to all college students. You can participate individually or as a team of up to 4 members.",
+                "HackOverflow is open to all college students. You can participate individually or as a team of up to 6 members.",
         },
         {
             question: "Do I need to have coding experience?",

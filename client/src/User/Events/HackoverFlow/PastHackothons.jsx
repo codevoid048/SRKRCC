@@ -1,18 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
-import { CalendarCheck, FileText, Trophy, Users, Image, Quote, Youtube, Link, Award, MapPin,ChevronLeft, ChevronRight  } from 'lucide-react';
+import { CalendarCheck, FileText, Trophy, Users, Image, Quote, Youtube, Link, Award, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '../../../Components/ui/card';
 import { Button } from '../../../Components/ui/button';
 
 
 
 const hridayamGalleryImages = [
-    { id: 1, url: '/demo/Hridayam/photo1.jpg', alt: 'Event moment 1' },
-    { id: 2, url: '/demo/Hridayam/photo2.jpg', alt: 'Event moment 2' },
-    { id: 3, url: '/demo/Hridayam/photo3.jpg', alt: 'Event moment 3' },
-    { id: 4, url: '/demo/Hridayam/photo4.jpg', alt: 'Event moment 4' },
-    { id: 5, url: '/demo/Hridayam/photo5.jpg', alt: 'Event moment 5' },
-    { id: 6, url: '/demo/Hridayam/photo6.jpg', alt: 'Event moment 6' },
-    { id: 7, url: '/demo/Hridayam/photo7.jpg', alt: 'Event moment 7' },
+    { id: 1, url: '/demo/Hackoverflow/cover.jpg', alt: 'Teams' },
+    { id: 2, url: '/demo/Hackoverflow/photo1.jpg', alt: 'Team' },
+    { id: 3, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Team' },
 ];
 // Sample data for different event editions. This data would typically be fetched from an API.
 const eventData = {
@@ -22,6 +18,7 @@ const eventData = {
         location: 'SRKR Engineering College, Bhimavaram.',
         date: 'October 18-19, 2024',
         team: 'Teams of 1-6 participants',
+        poster: '/demo/EventPosters/Hackoverflow2k24.png',
         gallerys: hridayamGalleryImages,
         winners: {
             first: {
@@ -41,7 +38,7 @@ const eventData = {
             },
         },
         gallery: [
-            { id: 1, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Participants brainstorming' },
+            // { id: 1, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Participants brainstorming' },
             { id: 2, url: '/demo/Hackoverflow/photo7.jpg', alt: 'Judges evaluating projects' },
             { id: 3, url: '/demo/Hackoverflow/photo3.jpg', alt: 'Award ceremony' },
             { id: 4, url: '/demo/Hackoverflow/photo4.jpg', alt: 'Networking session' },
@@ -197,7 +194,7 @@ export default function PastHackothons() {
                                     {/* Right side - Image */}
                                     <div className="aspect-video w-full rounded-lg overflow-hidden border bg-muted">
                                         <img
-                                            src="/demo/Hackoverflow/photo1.jpg"
+                                            src={currentEvent.poster}
                                             alt={`${currentEvent.title} event image`}
                                             className="w-full h-full object-cover"
                                         />

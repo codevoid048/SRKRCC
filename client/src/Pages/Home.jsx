@@ -137,7 +137,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Users, number: "", label: "" },
+              { icon: Users, number: "300", label: "Affilites" },
               { icon: Users, number: "80", label: "EBR & ABR's" },
               { icon: Code, number: "30", label: "Events & Workshops" },
               { icon: Trophy, number: "50", label: "Recognitions & Awards" },
@@ -260,12 +260,12 @@ export default function HomePage() {
                     description: "Join our flagship hackathon event and showcase your innovative solutions to real-world problems."
                   },
                   {
-                    title: "IconCoderZ",
+                    title: "Full Stack Web Development Course",
                     image: "/placeholder.svg",
                     status: "Ongoing",
                     statusColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
-                    date: "May 6, 2024",
-                    description: "Test your coding skills in our competitive programming contest with challenges for all skill levels."
+                    date: "June 12, 2025",
+                    description: "Join our 3-month online course to gain certification and build real-world projects. Top performers get a chance for a paid internship."
                   }
                 ].map((event, index) => (
                   <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20 hover:shadow-md transition-all duration-300 transform hover:scale-105">
@@ -298,7 +298,7 @@ export default function HomePage() {
                     status: "Upcoming",
                     statusColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
                     date: "October 18, 2025",
-                    description: "A team-based coding competition where groups compete to solve algorithmic challenges."
+                    description: "Join our flagship hackathon event and showcase your innovative solutions to real-world problems."
                   },
                   {
                     title: "Summer Coding Bootcamp",
@@ -453,13 +453,14 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               Ready to <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Join Us?</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Become a part of SRKR Coding Club and enhance your coding skills, participate in exciting events, and connect with like-minded individuals.
+              Register now to become a member of the SRKR Coding Club.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{ animationDelay: '0.3s' }}>
             <Link
-              to="/register"
+              to="/joinus"
               className="inline-flex items-center justify-center px-6 py-3 bg-accent text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Join Us <ArrowRight className="w-4 h-4 ml-2" />

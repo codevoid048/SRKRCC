@@ -8,7 +8,7 @@ const mockOngoingEvents = [
         title: "HackOverFlow 2K25",
         description: "24-hour hackathon to build innovative solutions.",
         date: "Reveal Soon...",
-        poster: "/placeholder.svg?height=400&width=600",
+        poster: "/demo/EventPosters/Hackoverflow2k24.png",
     },
 ];
 
@@ -23,7 +23,7 @@ const mockAllEvents = [
         location: "SRKR Engineering College, Bhimavaram.",
         status: "upcoming",
         category: "Hackathon",
-        poster: "/placeholder.svg?height=100&width=300",
+        poster: "/demo/EventPosters/Hackoverflow2k24.png",
     },
     {
         id: 2,
@@ -47,7 +47,7 @@ const mockAllEvents = [
         location: "Bhimavaram",
         status: "completed",
         category: "Cultural",
-        poster: "/placeholder.svg?height=100&width=300",
+        poster: "demo/EventPosters/Hridayam.png",
 
     },
     {
@@ -60,7 +60,7 @@ const mockAllEvents = [
         location: "SRKR Engineering College, Bhimavaram",
         status: "completed",
         category: "Hackathon",
-        poster: "/placeholder.svg?height=100&width=300",
+        poster: "/demo/EventPosters/Hackoverflow2k24.png",
     },
     {
         id: 5,
@@ -72,7 +72,7 @@ const mockAllEvents = [
         location: "SRKR Engineering College, Bhimavaram",
         status: "completed",
         category: "Competition",
-        poster: "/placeholder.svg?height=100&width=300",
+        poster: "demo/EventPosters/iconcoderz-2k24.jpg",
     },
 ];
 
@@ -81,7 +81,7 @@ const mockFlagshipEvents = [
         title: "HackOverFlow",
         description:
             "HackOverflow is our annual 24-hour hackathon where participants collaborate to turn ideas into impactful solutions. With mentorship, workshops, networking opportunities, and a vibrant coding environment, it’s a space to learn, build, and showcase talent while creating innovative solutions to real-world problems",
-        poster: "demo/EventPosters/iconcoderz-2k25.png",
+        poster: "/demo/EventPosters/Hackoverflow2k24.png",
         category: "Hackathon",
         details: [
             "24-hour coding hackathon",
@@ -99,14 +99,14 @@ const mockFlagshipEvents = [
             "Individual competition",
             "Multiple difficulty levels",
             "Algorithmic and data structure challenges",
-            
+
         ],
     },
     {
         title: "Hridayam",
         description:
             "Hridayam is a social service initiative by our club members, dedicated to giving back to the community and making a positive impact through compassion and service.",
-        poster: "demo/EventPosters/iconcoderz-2k25.png",
+        poster: "/demo/EventPosters/Hridayam.png",
         category: "social service",
         details: [
             "Community Service Activities led by Club Members",
@@ -119,9 +119,11 @@ const mockFlagshipEvents = [
 // Ongoing Events Section with horizontal layout
 const OngoingEventsSection = ({ events }) => {
     return (
-        <section className="w-full">
-            <div className="w-full h-72 bg-muted overflow-hidden flex">
-                <div className="w-1/3 h-64 relative flex items-center justify-center">
+        <section className="w-full bg-gradient-to-t from-primary/15 to-transparent">
+            <div className="w-full h-72 overflow-hidden flex p-10 ">
+                <div className="absolute top-64 right-1/4 w-8 h-8 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+
+                <div className="w-1/3 h-68 relative flex items-center justify-center p-2">
                     <img
                         src={events[0].poster}
                         alt={events[0].title}
@@ -130,7 +132,7 @@ const OngoingEventsSection = ({ events }) => {
                         className="rounded-lg object-cover w-full"
                     />
                 </div>
-                <div className="w-1/3 h-64 flex items-center justify-center p-4">
+                <div className="w-1/3 h-54 flex items-center justify-center">
                     <div className="text-center">
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                             {events[0].title}
@@ -234,8 +236,8 @@ const AllEventsSection = ({ events }) => {
                             <div
                                 key={event.id}
                                 className={`flex-shrink-0 w-96 snap-center transform transition-all duration-700 ease-out ${isVisible
-                                        ? "translate-y-0 opacity-100"
-                                        : "translate-y-20 opacity-0"
+                                    ? "translate-y-0 opacity-100"
+                                    : "translate-y-20 opacity-0"
                                     }`}
                                 style={{ transitionDelay: `${index * 100}ms` }}
                             >
@@ -301,8 +303,8 @@ const AllEventsSection = ({ events }) => {
                                     });
                                 }}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index
-                                        ? "bg-orange-500 scale-125"
-                                        : "bg-gray-300 dark:bg-gray-600 hover:bg-orange-400"
+                                    ? "bg-orange-500 scale-125"
+                                    : "bg-gray-300 dark:bg-gray-600 hover:bg-orange-400"
                                     }`}
                             ></button>
                         ))}
@@ -317,30 +319,31 @@ const AllEventsSection = ({ events }) => {
 const FlagshipEventsSection = ({ events }) => {
     return (
         <section className="bg-muted py-16 md:py-20">
-            
+
             <div className="container mx-auto px-4">
-                
+
                 <h2 className="mb-5 text-center text-3xl font-bold tracking-tight md:text-4xl">
                     Our Flagship Events
                 </h2>
-                
+
                 <div className="w-28 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-12"></div>
                 <div className="space-y-32">
-                    
+
                     {events.map((event, index) => (
                         <div
                             key={event.title}
                             className="grid gap-8 md:grid-cols-2 md:items-center mb-12"
                         >
-                            
+
                             <div
                                 className={`${index % 2 === 0 ? "order-2 md:order-1" : "order-1 md:order-1"
                                     }`}
                             >
-                                
+
                                 <h3 className="mb-4 text-5xl font-bold">{event.title}</h3>
-                                
-                               <p className="mb-6 text-md text-foreground">{event.description}</p>
+                                <div className="w-36 h-1 bg-gradient-to-b from-orange-600 to-accent  rounded-full mb-6"></div>
+
+                                <p className="mb-6 text-md text-foreground">{event.description}</p>
                                 <ul className="mb-6 text-md space-y-2">
                                     {event.details && event.details.length > 0 ? (
                                         event.details.map((detail, i) => (
@@ -386,33 +389,35 @@ const Events = () => {
 
     return (
         <div className="min-h-screen">
-            
+
             {ongoingEvents.length > 0 && (
                 <OngoingEventsSection events={ongoingEvents} />
             )}
             <section className="py-20 px-6">
-                
+
                 <div className="max-w-4xl mx-auto text-center">
-                    
+
                     <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
                         <span className="text-orange-500">Events</span> & Activities
                     </h1>
                     <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute top-96 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
-                    <div className="absolute top-96 right-20 w-16 h-16 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-                    <div className="absolute bottom-40 right-1/4 w-12 h-12 bg-primary/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-accent/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-                </div>
+                        <div className="absolute top-96 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
+                        <div className="absolute top-96 right-20 w-16 h-16 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+                        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-accent/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+                    </div>
                     <div className="w-28 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-4"></div>
-                    
+
                     <p className="text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
                         Discover our exciting events, competitions, and workshops designed
                         to enhance your coding journey
                     </p>
+
                 </div>
             </section>
 
             <AllEventsSection events={allEvents} />
+            {/* <div className="relativebottom-40 right-1/4 w-12 h-12 bg-primary/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div> */}
+
 
             <FlagshipEventsSection events={flagshipEvents} />
 

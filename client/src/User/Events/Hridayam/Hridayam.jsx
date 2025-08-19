@@ -23,7 +23,7 @@ const Hridayam = () => {
                     <div className="grid gap-8 md:grid-cols-2 md:items-center">
                         <div className="flex flex-col space-y-6">
                             <Badge className="w-fit bg-red-500 text-white hover:bg-red-600">Social Service</Badge>
-                            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">Hridayam 2024</h1>
+                            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">Hridayam 2025</h1>
                             <div className="w-32 h-1 bg-accent dark:bg-gradient-to-r from-primary to-orange-500 rounded-full mb-4"></div>
 
                             <p className="text-lg text-muted-foreground md:text-xl">
@@ -45,7 +45,7 @@ const Hridayam = () => {
                         </div>
                         <div className="w-full max-w-2xl flex justify-center items-center bg-white rounded-lg shadow-xl">
                             <img
-                                src="/demo/Hridayam/cover.jpg"
+                                src="/demo/EventPosters/Hridayam.png"
                                 alt="Hridayam Blood Donation"
                                 width={600}
                                 height={380}
