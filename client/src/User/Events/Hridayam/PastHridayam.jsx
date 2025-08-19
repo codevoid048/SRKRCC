@@ -5,13 +5,13 @@ import { Button } from '../../../Components/ui/button';
 
 // Sample data for the gallery images from the Hridayam component
 const hridayamGalleryImages = [
-    { id: 1, url: '../../../../public/demo/Hridayam/photo1.jpg', alt: 'Event moment 1' },
-    { id: 2, url: '../../../../public/demo/Hridayam/photo2.jpg', alt: 'Event moment 2' },
-    { id: 3, url: '../../../../public/demo/Hridayam/photo3.jpg', alt: 'Event moment 3' },
-    { id: 4, url: '../../../../public/demo/Hridayam/photo4.jpg', alt: 'Event moment 4' },
-    { id: 5, url: '../../../../public/demo/Hridayam/photo5.jpg', alt: 'Event moment 5' },
-    { id: 6, url: '../../../../public/demo/Hridayam/photo6.jpg', alt: 'Event moment 6' },
-    { id: 7, url: '../../../../public/demo/Hridayam/photo7.jpg', alt: 'Event moment 7' },
+    { id: 1, url: '/demo/Hridayam/photo1.jpg', alt: 'Event moment 1' },
+    { id: 2, url: '/demo/Hridayam/photo2.jpg', alt: 'Event moment 2' },
+    { id: 3, url: '/demo/Hridayam/photo3.jpg', alt: 'Event moment 3' },
+    { id: 4, url: '/demo/Hridayam/photo4.jpg', alt: 'Event moment 4' },
+    { id: 5, url: '/demo/Hridayam/photo5.jpg', alt: 'Event moment 5' },
+    { id: 6, url: '/demo/Hridayam/photo6.jpg', alt: 'Event moment 6' },
+    { id: 7, url: '/demo/Hridayam/photo7.jpg', alt: 'Event moment 7' },
 ];
 
 // Sample data for different event editions, similar to PastHackothons but for Hridayam.
@@ -70,7 +70,7 @@ const HridayamPastEvents = () => {
         if (!isHovering) {
             interval = setInterval(() => {
                 setActiveIndex((current) => (current + 1) % currentEvent.gallery.length);
-            }, 3000); 
+            }, 3000);
         }
         return () => clearInterval(interval);
     }, [isHovering, currentEvent.gallery.length]);
@@ -99,19 +99,21 @@ const HridayamPastEvents = () => {
     const nextIndex = (activeIndex + 1) % totalImages;
 
     return (
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="min-h-screen bg-background text-foreground mb-12">
             {/* Centered header for the entire page */}
             <div className="container mx-auto px-4 py-8">
                 <div className="mx-auto max-w-3xl text-center mb-6">
                     <h1 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">
                         Past Hridayam Events
                     </h1>
+                    <div className="w-28 h-1 bg-accent dark:bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-4"></div>
+
                     <p className="text-lg text-muted-foreground">
                         A look back at our annual blood donation drives and the impact we’ve made together.
                     </p>
                 </div>
             </div>
-            
+
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-2">
                     {/* Sidebar for navigation */}
@@ -122,8 +124,8 @@ const HridayamPastEvents = () => {
                                     key={year}
                                     onClick={() => handleEventSelect(year)}
                                     className={`flex items-center justify-center lg:justify-start w-full min-w-[80px] lg:min-w-0 px-4 py-3 rounded-md font-medium transition-colors whitespace-nowrap ${selectedEvent === year
-                                            ? 'bg-accent text-white'
-                                            : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                                        ? 'bg-accent text-white'
+                                        : 'bg-muted text-muted-foreground hover:bg-muted/80'
                                         }`}
                                 >
                                     <CalendarCheck className="mr-3 h-4 w-4 hidden lg:block" />

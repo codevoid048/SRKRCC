@@ -9,12 +9,12 @@ import ScrollToTopButton from '../../../Components/ScrollToTop';
 
 
 const Hridayam = () => {
-        useEffect(() => {
+    useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    }, []); 
+    }, []);
     return (
         <div>
             {/* Hero Section */}
@@ -23,10 +23,11 @@ const Hridayam = () => {
                     <div className="grid gap-8 md:grid-cols-2 md:items-center">
                         <div className="flex flex-col space-y-6">
                             <Badge className="w-fit bg-red-500 text-white hover:bg-red-600">Social Service</Badge>
-                            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">Hridayam 2024</h1>
+                            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">Hridayam 2025</h1>
+                            <div className="w-32 h-1 bg-accent dark:bg-gradient-to-r from-primary to-orange-500 rounded-full mb-4"></div>
+
                             <p className="text-lg text-muted-foreground md:text-xl">
-                                A life-saving initiative to give back to the community. Join us in our annual blood donation camp and make a difference.
-                            </p>
+                                Hridayam is a social service initiative by our club members, dedicated to giving back to the community and making a positive impact through compassion and service.                            </p>
                             <div className="space-y-4 rounded-lg bg-muted/80 p-4">
                                 <div className="flex items-center gap-2 text-sm">
                                     <Calendar className="h-5 w-5 text-primary" />
@@ -44,7 +45,7 @@ const Hridayam = () => {
                         </div>
                         <div className="w-full max-w-2xl flex justify-center items-center bg-white rounded-lg shadow-xl">
                             <img
-                                src="../../../../public/demo/Hridayam/cover.jpg"
+                                src="/demo/EventPosters/Hridayam.png"
                                 alt="Hridayam Blood Donation"
                                 width={600}
                                 height={380}
@@ -60,6 +61,8 @@ const Hridayam = () => {
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-3xl text-center">
                         <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Why Hridayam?</h2>
+                        <div className="w-28 h-1 bg-accent dark:bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mb-4"></div>
+
                         <p className="mb-12 text-lg text-muted-foreground">
                             Every blood donation is a life saved. Our "Hridayam" event is more than just a donation drive; it's a testament to our community's compassion and commitment to social responsibility.
                         </p>

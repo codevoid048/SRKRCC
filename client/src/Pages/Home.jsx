@@ -45,6 +45,8 @@ function Counter({ end, duration = 2000 }) {
 }
 
 export default function HomePage() {
+  const [activeTab, setActiveTab] = useState('ongoing');
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -92,7 +94,7 @@ export default function HomePage() {
                   Explore Events
                 </Link>
                 <Link
-                  to="/join"
+                  to="/joinus"
                   className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-accent hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Join Us
@@ -135,10 +137,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Users, number: "1500", label: "Members" },
-              { icon: Calendar, number: "50", label: "Events" },
-              { icon: Code, number: "200", label: "Projects" },
-              { icon: Trophy, number: "30", label: "Awards" },
+              { icon: Users, number: "300", label: "Affilites" },
+              { icon: Users, number: "80", label: "EBR & ABR's" },
+              { icon: Code, number: "30", label: "Events & Workshops" },
+              { icon: Trophy, number: "50", label: "Recognitions & Awards" },
             ].map((stat, index) => (
               <div key={index} className="bg-background rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-primary/20 reveal" style={{ animationDelay: `${index * 0.1}s` }}>
                 <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -161,6 +163,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               About <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Us</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               SRKR Coding Club is a student-led organization dedicated to fostering a culture of coding excellence and innovation at SRKR Engineering College.
             </p>
@@ -171,17 +174,17 @@ export default function HomePage() {
               {
                 icon: Lightbulb,
                 title: "Our Vision",
-                description: "To create a vibrant community of coders who can solve real-world problems through technology and innovation."
+                description: "To motivate and empower students by fostering a culture of learning, collaboration, and innovation, creating a community where they grow together and inspire others."
               },
               {
                 icon: Rocket,
                 title: "Our Mission",
-                description: "To provide a platform for students to learn, practice, and showcase their coding skills through various events and initiatives."
+                description: "Our mission is to empower students to learn and apply technology, organize projects and events that enhance skills and creativity, and build a supportive community for growth and positive impact."
               },
               {
                 icon: Shield,
                 title: "Our Values",
-                description: "Collaboration, innovation, continuous learning, and excellence in everything we do."
+                description: "we value learning, creativity, collaboration, integrity, and inclusivity, guiding our community to grow, innovate, and make a meaningful impact."
               }
             ].map((item, index) => (
               <div key={index} className="bg-muted/30 rounded-lg p-6 text-center hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-primary/20 reveal" style={{ animationDelay: `${index * 0.2}s` }}>
@@ -204,35 +207,69 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 reveal">
             <h2 className="text-4xl font-bold mb-4">
-              Upcoming <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Events</span>
+              Event <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Spotlight</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            {/* Ongoing Events */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Ongoing Events</h3>
-              <div className="space-y-6">
+          {/* Tab Navigation */}
+          <div className="flex justify-center mb-8 reveal">
+            <div className="bg-background rounded-lg p-1 shadow-sm border border-primary/20">
+              
+              <button
+                onClick={() => setActiveTab('upcoming')}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'upcoming'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+                  }`}
+              >
+                Upcoming Events
+              </button>
+              <button
+                onClick={() => setActiveTab('ongoing')}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'ongoing'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+                  }`}
+              >
+                Ongoing Events
+              </button>
+              <button
+                onClick={() => setActiveTab('flagship')}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'flagship'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+                  }`}
+              >
+                Flagship Events
+              </button>
+            </div>
+          </div>
+
+          {/* Tab Content */}
+          <div className="mb-8">
+            {activeTab === 'ongoing' && (
+              <div className="grid lg:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "HackOverflow 2024",
+                    title: "HackOverflow 2K25",
                     image: "/placeholder.svg",
                     status: "Ongoing",
-                    statusColor: "bg-green-100 text-green-800",
-                    date: "June 15-17, 2024",
+                    statusColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
+                    date: "October 18, 2025",
                     description: "Join our flagship hackathon event and showcase your innovative solutions to real-world problems."
                   },
                   {
-                    title: "IconCoderZ Spring Challenge",
+                    title: "Full Stack Web Development Course",
                     image: "/placeholder.svg",
                     status: "Ongoing",
-                    statusColor: "bg-green-100 text-green-800",
-                    date: "May 6, 2024",
-                    description: "Test your coding skills in our competitive programming contest with challenges for all skill levels."
+                    statusColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
+                    date: "June 12, 2025",
+                    description: "Join our 3-month online course to gain certification and build real-world projects. Top performers get a chance for a paid internship."
                   }
                 ].map((event, index) => (
-                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20">
-                    <img src={event.image} alt={event.title} className="w-full h-96 object-cover mb-4 rounded-lg" />
+                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20 hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                    <img src={event.image} alt={event.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
                     <div className="flex items-start justify-between mb-3">
                       <h4 className="text-lg font-bold">{event.title}</h4>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.statusColor}`}>
@@ -250,32 +287,30 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-            </div>
+            )}
 
-            {/* Upcoming Events */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Upcoming Events</h3>
-              <div className="space-y-6">
+            {activeTab === 'upcoming' && (
+              <div className="grid lg:grid-cols-2 gap-8">
                 {[
                   {
-                    title: "Code BattleGround",
+                    title: "HackOverFlow 2K25",
                     image: "/placeholder.svg",
                     status: "Upcoming",
-                    statusColor: "bg-blue-100 text-blue-800",
-                    date: "June 30, 2024",
-                    description: "A team-based coding competition where groups compete to solve algorithmic challenges."
+                    statusColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
+                    date: "October 18, 2025",
+                    description: "Join our flagship hackathon event and showcase your innovative solutions to real-world problems."
                   },
                   {
                     title: "Summer Coding Bootcamp",
                     image: "/placeholder.svg",
                     status: "Upcoming",
-                    statusColor: "bg-blue-100 text-blue-800",
+                    statusColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
                     date: "July 1-15, 2024",
                     description: "Intensive two-week training program covering web development, machine learning, and more."
                   }
                 ].map((event, index) => (
-                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20">
-                    <img src={event.image} alt={event.title} className="w-full h-96 object-cover mb-4 rounded-lg" />
+                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20 hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                    <img src={event.image} alt={event.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
                     <div className="flex items-start justify-between mb-3">
                       <h4 className="text-lg font-bold">{event.title}</h4>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.statusColor}`}>
@@ -296,7 +331,51 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-            </div>
+            )}
+
+            {activeTab === 'flagship' && (
+              <div className="grid lg:grid-cols-2 gap-8">
+                {[
+                  {
+                    title: "HackOverflow",
+                    image: "/placeholder.svg",
+                    status: "Annual Hackathon Event",
+                    statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
+                    nextEvent: "Next Event: October, 2025",
+                    description: "Our annual hackathon where participants collaborate to create innovative solutions to real-world problems. Join us for 48 hours of coding, learning, and networking."
+                  },
+                  {
+                    title: "IconCoderZ",
+                    image: "/placeholder.svg",
+                    status: "Coding Competition Series",
+                    statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
+                    nextEvent: "Next Event: February, 2025",
+                    description: "A competitive programming contest designed to test your coding skills and problem-solving abilities. Participate in beginner and expert categories."
+                  }
+                ].map((event, index) => (
+                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20 hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                    <img src={event.image} alt={event.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
+                    <div className="flex items-start justify-between mb-3">
+                      <h4 className="text-lg font-bold">{event.title}</h4>
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.statusColor}`}>
+                        {event.status}
+                      </span>
+                    </div>
+                    <p className="text-sm text-primary font-medium mb-2">{event.nextEvent}</p>
+                    <p className="text-muted-foreground mb-3">{event.description}</p>
+                    <Link
+                      to="/events"
+                      className="inline-flex items-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                    >
+                      <span className="group inline-flex items-center">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
+                      </span>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="text-center reveal">
@@ -306,52 +385,6 @@ export default function HomePage() {
             >
               View All Events
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Flagship Events */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-16 h-16 bg-primary/5 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-20 h-20 bg-accent/5 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        </div>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 reveal">
-            <h2 className="text-4xl font-bold mb-4">
-              Our Flagship <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Events</span>
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {[
-              {
-                title: "HackOverflow",
-                image: "/placeholder.svg",
-                description: "Our annual hackathon where participants collaborate to create innovative solutions to real-world problems. Join us for 48 hours of coding, learning, and networking.",
-                nextEvent: "Next Event: April 15-17, 2024"
-              },
-              {
-                title: "IconCoderZ",
-                image: "/placeholder.svg",
-                description: "A competitive programming contest, designed to test your coding skills and problem-solving abilities. Participate in beginner and expert categories.",
-                nextEvent: "Next Event: May 9, 2024"
-              }
-            ].map((event, index) => (
-              <div key={index} className="bg-muted/30 rounded-lg p-8 border border-primary/20 hover:shadow-lg transition-all duration-300 transform hover:scale-105 reveal" style={{ animationDelay: `${index * 0.2}s` }}>
-                <img src={event.image} alt={event.title} className="w-full h-96 object-cover mb-4 rounded-lg" />
-                <h3 className="text-2xl font-bold mb-4">{event.title}</h3>
-                <p className="text-muted-foreground mb-4">{event.description}</p>
-                <p className="text-sm text-primary font-medium mb-4">{event.nextEvent}</p>
-                <Link to="/events" className="inline-flex items-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
-                  <span className="group inline-flex items-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
-                  </span>
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -370,6 +403,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               What Our Members <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Say</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -419,13 +453,14 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               Ready to <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Join Us?</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Become a part of SRKR Coding Club and enhance your coding skills, participate in exciting events, and connect with like-minded individuals.
+              Register now to become a member of the SRKR Coding Club.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{ animationDelay: '0.3s' }}>
             <Link
-              to="/register"
+              to="/joinus"
               className="inline-flex items-center justify-center px-6 py-3 bg-accent text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Join Us <ArrowRight className="w-4 h-4 ml-2" />
@@ -454,6 +489,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4">
               Contact <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Us</span>
             </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
             <p className="text-xl text-muted-foreground">
               Have questions or want to get involved? Reach out to us!
             </p>
@@ -469,18 +505,32 @@ export default function HomePage() {
               {
                 icon: Mail,
                 title: "Email",
-                content: "contact@srkrcodingclub.org"
+                content: [
+                  "srkrcodingclubofficial@gmail.com",
+                  "davidrajukuppala@srkrec.ac.in",
+                  "events.srkrcodingclub@gmail.com"
+                ]
               },
               {
                 icon: Phone,
                 title: "Phone",
-                content: "+91 1234567890"
+                content:  [
+                  "+91 8121702286",
+                  "contact.srkrcodingclub@gmail.com",
+                  "events.srkrcodingclub@gmail.com"
+                ]
               }
             ].map((contact, index) => (
               <div key={index} className="bg-background rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-primary/20 dark:border-primary/10 reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-                <contact.icon className="w-8 h-8 text-primary mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">{contact.title}</h3>
-                <p className="text-muted-foreground">{contact.content}</p>
+                <contact.icon className="w-8 h-8 text-primary mx-auto mb-1" />
+                <h3 className="text-xl font-bold mb-2">{contact.title}</h3>
+                {Array.isArray(contact.content) ? (
+                  contact.content.map((email, i) => (
+                    <p key={i} className="text-muted-foreground">{email}</p>
+                  ))
+                ) : (
+                  <p className="text-muted-foreground">{contact.content}</p>
+                )}
               </div>
             ))}
           </div>
