@@ -245,20 +245,7 @@ const HridayamPastEvents = () => {
                                 </div>
                             </section>
 
-                            <section className="mb-8">
-                                <h3 className="mb-4 text-l font-bold flex items-center">
-                                    <Quote className="mr-2 text-red-500" />
-                                    Testimonials
-                                </h3>
-                                <div className="grid gap-6 md:grid-cols-2">
-                                    {currentEvent.testimonials.map((t, index) => (
-                                        <div key={index} className="bg-muted/50 p-6 rounded-lg border">
-                                            <p className="italic text-muted-foreground mb-4">"{t.quote}"</p>
-                                            <p className="font-semibold text-red-500">- {t.author}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
+                            
                         </div>
                     </main>
                 </div>

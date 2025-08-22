@@ -5,10 +5,18 @@ import { Button } from '../../../Components/ui/button';
 
 
 
-const hridayamGalleryImages = [
-    { id: 1, url: '/demo/Hackoverflow/cover.jpg', alt: 'Teams' },
-    { id: 2, url: '/demo/Hackoverflow/photo1.jpg', alt: 'Team' },
-    { id: 3, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Team' },
+const hackoverflowGalleryImages = [
+    { id: 1, url: '/demo/Hackoverflow/hk23b.jpg', alt: 'Team' },
+    { id: 2, url: '/demo/Hackoverflow/hk23g.png', alt: 'Team' },
+    { id: 3, url: '/demo/Hackoverflow/hk23h.png', alt: 'Team' },
+
+
+];
+const hackoverflow24GalleryImages = [
+    { id: 1, url: '/demo/Hackoverflow/photo1.jpg', alt: 'Teams' },
+    { id: 2, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Team' },
+    { id: 3, url: '/demo/Hackoverflow/photo3.jpg', alt: 'Team' },
+    { id: 3, url: '/demo/Hackoverflow/photo4.jpg', alt: 'Team' },
 ];
 
 // Sample data for different event editions. This data would typically be fetched from an API.
@@ -18,28 +26,28 @@ const eventData = {
         description: 'A 24-hour hackathon focused on building innovative solutions for environmental sustainability. Participants developed projects ranging from waste management trackers to renewable energy dashboards. The event was a huge success, fostering collaboration and creative problem-solving.',
         location: 'SRKR Engineering College, Bhimavaram.',
         date: 'October 18-19, 2024',
-        team: 'Teams of 1-6 participants',
+        team: 'Teams of 3-6 participants',
         poster: '/demo/EventPosters/Hackoverflow2k24.png',
-        gallerys: hridayamGalleryImages,
+        gallerys: hackoverflow24GalleryImages,
         winners: {
             first: {
                 teamName: 'AIM',
                 projectLink: 'IIIT RGUKT RK VALLEY',
-                members: ['Panasa Viswanatha Vishnu','Ambati Vijaya Bhaskar Reedy','Vanapalli Madhu Deekshitha'],
+                members: ['Panasa Viswanatha Vishnu', 'Ambati Vijaya Bhaskar Reedy', 'Vanapalli Madhu Deekshitha'],
             },
             second: {
                 teamName: 'Team Arjuna',
                 projectLink: 'SRKR Engineering College',
-                members: ['Thirumalla sai naga manikanta','Nakka Veera vasu','Mekala Harish','Palivela Nikhileswar','Pedada Venkataramana','Dadala Rajesh'],
+                members: ['Thirumalla sai naga manikanta', 'Nakka Veera vasu', 'Mekala Harish', 'Palivela Nikhileswar', 'Pedada Venkataramana', 'Dadala Rajesh'],
             },
             third: {
                 teamName: 'Green Minds',
                 projectLink: 'SRKR Engineering College',
-                members: ['Tejassri Avinasha Ryali','Venkateswarlu Thanneru','T.Vigna Ramtej','Mohankrishna Puppala'],
+                members: ['Tejassri Avinasha Ryali', 'Venkateswarlu Thanneru', 'T.Vigna Ramtej', 'Mohankrishna Puppala'],
             },
         },
         gallery: [
-            // { id: 1, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Participants brainstorming' },
+            { id: 1, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Participants brainstorming' },
             { id: 2, url: '/demo/Hackoverflow/photo7.jpg', alt: 'Judges evaluating projects' },
             { id: 3, url: '/demo/Hackoverflow/photo3.jpg', alt: 'Award ceremony' },
             { id: 4, url: '/demo/Hackoverflow/photo4.jpg', alt: 'Networking session' },
@@ -62,7 +70,11 @@ const eventData = {
     '2K23': {
         title: 'HackOverFlow 2K23',
         description: 'A hackathon focused on developing web-based applications. The theme was "Future of Communication," challenging teams to build innovative platforms for connecting people.',
-        gallerys: hridayamGalleryImages,
+        gallerys: hackoverflowGalleryImages,
+        location: 'SRKR Engineering College, Bhimavaram.',
+        date: 'October 19-20, 2023',
+        team: 'Teams of 3-6 participants',
+        poster: '/demo/EventPosters/Hackoverflow2k23.png',
         winners: {
             first: {
                 teamName: 'Syntax Savants',
@@ -81,15 +93,29 @@ const eventData = {
             },
         },
         gallery: [
-            { id: 4, url: 'https://placehold.co/800x600/fcd34d/fff?text=Photo+A', alt: 'Opening ceremony' },
-            { id: 5, url: 'https://placehold.co/800x600/93c5fd/fff?text=Photo+B', alt: 'Group photo' },
+            { id: 1, url: '/demo/Hackoverflow/hk23a.jpg', alt: 'Teams' },
+            { id: 2, url: '/demo/Hackoverflow/hk23b.jpg', alt: 'Team' },
+            { id: 3, url: '/demo/Hackoverflow/hk23f.jpg', alt: 'Team' },
+            { id: 4, url: '/demo/Hackoverflow/hk23d.png', alt: 'Team' },
+            { id: 5, url: '/demo/Hackoverflow/hk23c.png', alt: 'Team' },
+            { id: 6, url: '/demo/Hackoverflow/hk23e.png', alt: 'Team' },
         ],
         testimonials: [
-            { author: 'Chris Evans', quote: 'The workshops on full-stack development were invaluable. The mentors were amazing and really helped us refine our idea.' },
+            { author: '', quote: 'Beyond the coding, HackOverflow 2k23 created an amazing atmosphere of innovation and collaboration. Meeting like-minded peers and brainstorming ideas together was the best part.' },
+            { author: 'Chris Evans', quote: 'HackOverflow 2k23 was my first hackathon, and it truly inspired me. The mentorship and workshops helped me understand real-world problem-solving. I walked away with new skills and a lot more confidence.' },
+
         ],
         feedback: null,
         videoUrl: 'https://www.youtube.com/embed/q3J0oQ_3zQ', // Another placeholder video link
-        sponsors: ['Global Communications', 'WebSphere Labs'],
+        sponsors: [
+            { id: 1, url: '/demo/Hackoverflow/hk23sp1.jpg', alt: 'Judges evaluating projects' },
+            { id: 2, url: '/demo/Hackoverflow/hk23sp2.png', alt: 'Award ceremony' },
+            { id: 3, url: '/demo/Hackoverflow/hk23sp1.jpg', alt: 'Networking session' },
+            { id: 4, url: '/demo/Hackoverflow/hk23sp2.png', alt: 'Award ceremony' },
+            { id: 5, url: '/demo/Hackoverflow/hk23sp1.jpg', alt: 'Networking session' },
+            { id: 6, url: '/demo/Hackoverflow/hk23sp2.png', alt: 'Award ceremony' },
+
+        ],
     },
 };
 
@@ -236,7 +262,7 @@ export default function PastHackothons() {
                                                     <p className="text-muted-foreground mb-4">
                                                         <span className="font-semibold text-primary">College:</span> {winner.projectLink}
                                                     </p>
-                                                   
+
                                                 </CardContent>
                                             </Card>
                                         );
@@ -408,12 +434,12 @@ export default function PastHackothons() {
                                     Sponsors
                                 </h3>
                                 <div className="relative overflow-hidden">
-                                    <div className="flex animate-sponsors-scroll gap-6">
+                                    <div className="flex animate-sponsors-scroll gap-12">
                                         {/* First set of sponsor logos */}
                                         {currentEvent.sponsors.map((sponsor, index) => (
                                             <div
                                                 key={index}
-                                                className="flex-shrink-0 w-54 h-28 rounded-lg  overflow-hidden border hover:shadow-md transition-all duration-300 hover:scale-105"
+                                                className="flex-shrink-0 w-44 h-32 rounded-lg  overflow-hidden border hover:shadow-md transition-all duration-300 hover:scale-105"
                                             >
                                                 <img
                                                     src={sponsor.url}
@@ -426,7 +452,7 @@ export default function PastHackothons() {
                                         {currentEvent.sponsors.map((sponsor, index) => (
                                             <div
                                                 key={`duplicate-${index}`}
-                                                className="flex-shrink-0 w-54 h-28 rounded-lg overflow-hidden border hover:shadow-md transition-all duration-300 hover:scale-105"
+                                                className="flex-shrink-0 w-44 h-32 rounded-lg overflow-hidden border hover:shadow-md transition-all duration-300 hover:scale-105"
                                             >
                                                 <img
                                                     src={sponsor.url}

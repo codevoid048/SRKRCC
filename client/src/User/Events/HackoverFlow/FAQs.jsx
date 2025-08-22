@@ -61,7 +61,7 @@ const FAQs = () => {
                         <div className="mt-8 text-center">
                             <p className="text-muted-foreground">Still have questions? Feel free to reach out to us.</p>
                             <Button variant="link" asChild>
-                                <Link href="mailto:hackoverflow@srkrcodingclub.org">hackoverflow@srkrcodingclub.org</Link>
+                                <Link href="mailto:hackoverflow@srkrcodingclub.org">srkrcodingclubofficial@gmail.com</Link>
                             </Button>
                         </div>
                     </div>
