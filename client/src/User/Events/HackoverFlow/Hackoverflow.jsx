@@ -164,7 +164,7 @@ const Hackoverflow = () => {
                                     //         Prizes & Rewards Announce Soon......
                                     //     </span>
                                     // </div>
-                                    <div className=" bg-primary/10  flex h-40 flex-col items-center justify-center rounded-lg bg-muted/40">
+                                    <div className="mt-8 bg-primary/10  flex h-40 flex-col items-center justify-center rounded-lg bg-muted/40">
                                         <Trophy className="mb-2 h-10 w-10  text-muted-foreground/50" />
                                         <span className=" text-primary text-xl font-semibold">Prizes & Rewards Announce Soon......</span>
                                     </div>

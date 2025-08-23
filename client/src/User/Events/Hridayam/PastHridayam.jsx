@@ -25,15 +25,9 @@ const hridayamEventData = {
         gallery: hridayamGalleryImages,
         impact: 'This summer, Hridayam donated coolers to an old age home, bringing comfort and care to the residents. A small act of kindness that turned the heat into hope.',
         process: [
-            'Registration and Health Checkup',
-            'Blood Donation',
-            'Rest and Refreshments',
-            'Receive Certificate and Donor Card',
+            'Hridayam reflects the spirit of giving—small acts of kindness, shared stories, and collective efforts that build hope and inspire change.',
         ],
-        testimonials: [
-            { author: 'Jane Doe', quote: 'An incredible experience! The mentors were so helpful, and the energy was fantastic. We learned so much in just one weekend.' },
-            { author: 'John Smith', quote: 'The best hackathon I\'ve ever been to. The focus on sustainability was inspiring and made us think deeply about our project\'s impact.' },
-        ],
+        
     },
 };
 
@@ -245,20 +239,7 @@ const HridayamPastEvents = () => {
                                 </div>
                             </section>
 
-                            <section className="mb-8">
-                                <h3 className="mb-4 text-l font-bold flex items-center">
-                                    <Quote className="mr-2 text-red-500" />
-                                    Testimonials
-                                </h3>
-                                <div className="grid gap-6 md:grid-cols-2">
-                                    {currentEvent.testimonials.map((t, index) => (
-                                        <div key={index} className="bg-muted/50 p-6 rounded-lg border">
-                                            <p className="italic text-muted-foreground mb-4">"{t.quote}"</p>
-                                            <p className="font-semibold text-red-500">- {t.author}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
+                            
                         </div>
                     </main>
                 </div>

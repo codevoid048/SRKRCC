@@ -338,7 +338,7 @@ export default function HomePage() {
                 {[
                   {
                     title: "HackOverflow",
-                    image: "/placeholder.svg",
+                    image: "/demo/EventPosters/Hackoverflow2k24.png",
                     status: "Annual Hackathon Event",
                     statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
                     nextEvent: "Next Event: October, 2025",
@@ -346,7 +346,7 @@ export default function HomePage() {
                   },
                   {
                     title: "IconCoderZ",
-                    image: "/placeholder.svg",
+                    image: "/demo/EventPosters/iconcoderz-2k25.png",
                     status: "Coding Competition Series",
                     statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
                     nextEvent: "Next Event: February, 2025",

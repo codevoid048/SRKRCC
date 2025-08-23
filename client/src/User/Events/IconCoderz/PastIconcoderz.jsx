@@ -10,13 +10,21 @@ const iconcoderzGalleryImages = [
     { id: 3, url: '/demo/Iconcoderz/photo3.jpg', alt: 'Judges' },
     { id: 4, url: '/demo/Iconcoderz/photo4.jpg', alt: 'Team photo' },
     { id: 5, url: '/demo/Iconcoderz/photo5.jpg', alt: 'Coding in action' },
-    
+
+];
+const iconcoderz24GalleryImages = [
+    { id: 1, url: '/demo/Iconcoderz/ic24f.png', alt: 'Participants coding' },
+    { id: 2, url: '/demo/Iconcoderz/ic24g.jpg', alt: 'Awards ceremony' },
+    { id: 3, url: '/demo/Iconcoderz/ic24h.jpg', alt: 'Judges' },
+    { id: 4, url: '/demo/Iconcoderz/ic24d.jpg', alt: 'Team photo' },
+    { id: 5, url: '/demo/Iconcoderz/ic24e.jpg', alt: 'Coding in action' },
+
 ];
 // Sample data for different event editions. This data would typically be fetched from an API.
 const eventData = {
     '2K25': {
         title: 'IconCoderz 2K25',
-        description: 'A challenging competitive programming competition focused on advanced data structures and algorithms. The event brought together top student coders from across the region to solve complex problems under pressure.',
+        description: 'A challenging competitive programming competition focused on advanced data structures and algorithms. The event featured a mix of easy and medium-level problems, encouraging participation from all students.',
         location: 'SRKR Engineering College, Bhimavaram.',
         date: 'February 4th, 2K25',
         team: 'Beginners and Experts',
@@ -24,24 +32,12 @@ const eventData = {
         gallerys: iconcoderzGalleryImages,
         winners: {
             expert: {
-                first: {
-                    teamName: 'Binary Braves',
-                    members: ['Alice Johnson', 'Bob Williams'],
-                },
-                second: {
-                    teamName: 'Code Crushers',
-                    members: ['Charlie Davis', 'Diana Prince'],
-                },
+                first: 'William Keri',
+                second: 'Pulaparthi Arun Teja ',
             },
             beginner: {
-                first: {
-                    teamName: 'Syntax Knights',
-                    members: ['Eva Green'],
-                },
-                second: {
-                    teamName: 'Logic Legends',
-                    members: ['Frank Ocean', 'Grace Jones'],
-                },
+                first: 'Chintalapudi Sathvik ',
+                second: 'Nekkanti Surya Pravallika ',
             },
         },
         gallery: [
@@ -54,50 +50,39 @@ const eventData = {
             { id: 7, url: '/demo/Iconcoderz/photo7.jpg', alt: 'Participants networking' },
         ],
         testimonials: [
-            { author: 'Alice Johnson', quote: 'The problems were incredibly well-designed and tested my limits. Winning was a huge honor!' },
-            { author: 'Frank Ocean', quote: 'As a beginner, I was nervous, but the problems were challenging yet approachable. A great learning experience.' },
+            { author: 'Chintalapudi Sathvik', quote: 'Competing in the 2k25 beginner category was an amazing learning experience! The challenges pushed me to think differently.The problems were perfectly designed to test both skill and creativity.' },
+            { author: 'William Keri', quote: 'The contest was tough but super rewarding. Winning the expert category gave us the confidence to aim higher in our coding journey. The organization was top-notch!' },
         ],
         feedback: 'Participants rated the problem quality and event organization highly, with an average score of 4.7/5.',
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // A placeholder video link
     },
     '2K24': {
         title: 'IconcoderZ 2K24',
-        description: 'Our inaugural coding competition, designed to spark interest in competitive programming. The event featured a mix of easy and medium-level problems, encouraging participation from all students.',
+        description: 'A challenging competitive programming competition focused on advanced data structures and algorithms. The event featured a mix of easy and medium-level problems, encouraging participation from all students.',
         location: 'SRKR Engineering College, Bhimavaram.',
-        date: 'February 4th, 2024',
-        team: 'Beginners and Experts',
+        date: 'January 24th, 2024',
+        team: 'Open to all SRKR Students',
         poster: '/demo/EventPosters/iconcoderz-2k24.jpg',
-        gallerys: iconcoderzGalleryImages,
+        gallerys: iconcoderz24GalleryImages,
         winners: {
-            expert: {
-                first: {
-                    teamName: 'Master Minds',
-                    members: ['Luke Skywalker', 'Leia Organa'],
-                },
-                second: {
-                    teamName: 'Data Jedi',
-                    members: ['Han Solo', 'Chewbacca'],
-                },
-            },
-            beginner: {
-                first: {
-                    teamName: 'Code Cadets',
-                    members: ['Yoda'],
-                },
-                second: {
-                    teamName: 'Syntax Soldiers',
-                    members: ['Obi-Wan Kenobi'],
-                },
-            },
+            members: {
+                first: "K Teja Venkata Vinesh Kumar - 20B91A5424 AIDS",
+                second: "Marikanthi Sai - 21B91A54A4 AIDS",
+                third: "Chandaka Balaji - 20B91A0435 ECE"
+            }
         },
         gallery: [
-            { id: 4, url: 'https://placehold.co/800x600/fcd34d/fff?text=Photo+A', alt: 'Opening ceremony' },
-            { id: 5, url: 'https://placehold.co/800x600/93c5fd/fff?text=Photo+B', alt: 'Group photo' },
-            { id: 6, url: 'https://placehold.co/800x600/a78bfa/fff?text=Photo+X', alt: 'Event space' },
+            { id: 1, url: '/demo/Iconcoderz/ic24e.jpg', alt: 'Participants coding' },
+            { id: 2, url: '/demo/Iconcoderz/ic24b.jpg', alt: 'Awards ceremony' },
+            { id: 3, url: '/demo/Iconcoderz/ic24f.png', alt: 'Judges' },
+            { id: 4, url: '/demo/Iconcoderz/ic24d.jpg', alt: 'Team photo' },
+            { id: 5, url: '/demo/Iconcoderz/ic24c.jpg', alt: 'Coding in action' },
+            { id: 6, url: '/demo/Iconcoderz/ic24d.jpg', alt: 'Event venue' },
+            { id: 7, url: '/demo/Iconcoderz/ic24g.jpg', alt: 'Participants networking' },
         ],
         testimonials: [
-            { author: 'Luke Skywalker', quote: 'The competition was fierce, but the atmosphere was very supportive. I enjoyed every minute of it.' },
-            { author: 'Obi-Wan Kenobi', quote: 'A fantastic way to get started with competitive programming. The mentors were great, and I learned a lot.' },
+            { author: 'Chakri Ramisetti', quote: 'This was my first coding competition and it exceeded my expectations. The smooth organization and exciting atmosphere made me want to come back next year!.' },
+            { author: 'Siva Ramaraju Relangi', quote: 'I didn’t win this time, but I definitely learned a lot. The problems were challenging yet approachable, and the mentors were really supportive throughout the event' },
         ],
         feedback: null,
         videoUrl: 'https://www.youtube.com/embed/q3J0oQ_3zQ', // Another placeholder video link
@@ -109,7 +94,6 @@ export default function PastIconCoderz() {
     const mainContentRef = useRef(null);
     const currentEvent = eventData[selectedEvent];
     const eventYears = Object.keys(eventData).sort((a, b) => b.localeCompare(a));
-
     const [activeIndex, setActiveIndex] = useState(0);
     const [isHovering, setIsHovering] = useState(false);
 
@@ -224,39 +208,69 @@ export default function PastIconCoderz() {
                                     <Trophy className="mr-2 text-blue-500" />
                                     Winners Details
                                 </h3>
-                                <div className="grid gap-6 md:grid-cols-2">
-                                    {/* Expert Category */}
-                                    <Card>
-                                        <CardContent className="p-6 bg-muted/50">
-                                            <div className="flex items-center mb-3">
-                                                <Award className="w-6 h-6 mr-2 text-yellow-500" />
-                                                <h4 className="text-xl font-bold">Expert Category</h4>
-                                            </div>
-                                            <p className="text-muted-foreground mb-2">
-                                                <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.expert.first.teamName} - {currentEvent.winners.expert.first.members.join(', ')}
-                                            </p>
-                                            <p className="text-muted-foreground mb-4">
-                                                <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.expert.second.teamName} - {currentEvent.winners.expert.second.members.join(', ')}
-                                            </p>
-                                        </CardContent>
-                                    </Card>
+                                {selectedEvent === "2K24" ? (
+                                    <div className="grid mx-16">
+                                        <Card>
+                                            <CardContent className="p-6 bg-muted/50">
+                                                <p className="text-muted-foreground mb-2">
+                                                    <div className="flex items-center mb-3">
+                                                        <Award className="w-6 h-6 mr-2 text-yellow-500" />
+                                                        <span className="font-semibold text-foreground mr-2">1st Place: </span>
+                                                        {currentEvent.winners.members.first}{" "}
+                                                    </div>
+                                                </p>
+                                                <p className="text-muted-foreground mb-2">
+                                                    <div className="flex items-center mb-3">
+                                                        <Award className="w-6 h-6 mr-2 text-white-900" />
+                                                        <span className="font-semibold text-foreground mr-2">2nd Place: </span>{" "}
+                                                        {currentEvent.winners.members.second} {" "}
+                                                    </div>
+                                                </p>
+                                                <p className="text-muted-foreground mb-">
+                                                    <div className="flex items-center mb-3">
+                                                        <Award className="w-6 h-6 mr-2 text-yellow-900" />
+                                                        <span className="font-semibold text-foreground mr-2">3rd Place: </span>{" "}
+                                                        {currentEvent.winners.members.third} {" "}
+                                                    </div>
+                                                </p>
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                ) : (
+                                    <div className="grid gap-6 md:grid-cols-2">
+                                        {/* Expert Category */}
+                                        <Card>
+                                            <CardContent className="p-6 bg-muted/50">
+                                                <div className="flex items-center mb-3">
+                                                    <Award className="w-6 h-6 mr-2 text-yellow-500" />
+                                                    <h4 className="text-xl font-bold">Expert Category</h4>
+                                                </div>
+                                                <p className="text-muted-foreground mb-2">
+                                                    <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.expert.first}
+                                                </p>
+                                                <p className="text-muted-foreground mb-4">
+                                                    <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.expert.second}
+                                                </p>
+                                            </CardContent>
+                                        </Card>
 
-                                    {/* Beginner Category */}
-                                    <Card>
-                                        <CardContent className="p-6 bg-muted/50">
-                                            <div className="flex items-center mb-3">
-                                                <Award className="w-6 h-6 mr-2 text-gray-500" />
-                                                <h4 className="text-xl font-bold">Beginner Category</h4>
-                                            </div>
-                                            <p className="text-muted-foreground mb-2">
-                                                <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.beginner.first.teamName} - {currentEvent.winners.beginner.first.members.join(', ')}
-                                            </p>
-                                            <p className="text-muted-foreground mb-4">
-                                                <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.beginner.second.teamName} - {currentEvent.winners.beginner.second.members.join(', ')}
-                                            </p>
-                                        </CardContent>
-                                    </Card>
-                                </div>
+                                        {/* Beginner Category */}
+                                        <Card>
+                                            <CardContent className="p-6 bg-muted/50">
+                                                <div className="flex items-center mb-3">
+                                                    <Award className="w-6 h-6 mr-2 text-gray-500" />
+                                                    <h4 className="text-xl font-bold">Beginner Category</h4>
+                                                </div>
+                                                <p className="text-muted-foreground mb-2">
+                                                    <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.beginner.first} 
+                                                </p>
+                                                <p className="text-muted-foreground mb-4">
+                                                    <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.beginner.second}
+                                                </p>
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                )}
                             </section>
 
                             {/* Gallery Section */}
