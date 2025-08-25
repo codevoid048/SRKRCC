@@ -1,12 +1,12 @@
 
 
 import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Button } from "../../components/ui/button"
-import { Input } from "../../components/ui/input"
-import { Badge } from "../../components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "../../components/ui/avatar"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../components/ui/dropdown-menu"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../Components/ui/card"
+import { Button } from "../../Components/ui/button"
+import { Input } from "../../Components/ui/input"
+import { Badge } from "../../Components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "../../Components/ui/avatar"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../Components/ui/dropdown-menu"
 import { Plus, Search, MoreHorizontal, Edit, Trash2, Users } from "lucide-react"
 
 import { useNavigate } from "react-router-dom"

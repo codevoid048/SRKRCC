@@ -1,10 +1,10 @@
 import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Button } from "../../components/ui/button"
-import { Input } from "../../components/ui/input"
-import { Badge } from "../../components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../components/ui/dropdown-menu"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../Components/ui/card"
+import { Button } from "../../Components/ui/button"
+import { Input } from "../../Components/ui/input"     
+import { Badge } from "../../Components/ui/badge"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../Components/ui/tabs"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../Components/ui/dropdown-menu"
 import { Plus, Search, MoreHorizontal, Edit, Trash2, Calendar, Clock, MapPin, Users } from "lucide-react"
 
 export default function EventsManagement() {

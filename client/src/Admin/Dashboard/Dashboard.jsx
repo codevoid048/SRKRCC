@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Button } from "../../components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../Components/ui/card"
+import { Button } from "../../Components/ui/button"
 import { Users, UserCheck, Calendar, GraduationCap, TrendingUp, Activity, Clock } from "lucide-react"
 
 export default function DashboardPage() {
