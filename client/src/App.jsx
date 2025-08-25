@@ -51,7 +51,7 @@ import Affiliates from './Pages/Affiliates'
 import Registrations from './Pages/JoinUs'
 import Contact from './Pages/Contact'
 import TeamPage from './Pages/TeamPage'
-import Admin from './Admin/admin'
+import Admin from './Admin/Admin'
 
 
 const App = () => {
