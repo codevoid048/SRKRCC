@@ -76,7 +76,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side */}
             <div className="space-y-6 reveal">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/80 text-black text-sm font-medium">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/80 text-white text-sm font-medium">
                 Learn - Build - Innovate
               </div>
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -103,20 +103,20 @@ export default function HomePage() {
             </div>
 
             {/* Right Side */}
-            <div className="flex justify-center lg:justify-end reveal" style={{ animationDelay: '0.3s' }}>
+            <div className="flex justify-center  lg:reveal ml-auto" style={{ animationDelay: '0.3s' }}>
               <div className="relative">
                 <div className="w-96 h-96 flex items-center justify-center">
                   {/* Light theme logo */}
                   <img
-                    src="/srkrcc-logo-light.png"
+                    src="/srkrcc-logo.png"
                     alt="SRKR Coding Club Logo"
-                    className="w-104 h-104 object-contain dark:hidden rounded-full transition-transform duration-300 hover:scale-110"
+                    className="w-104 h-104 object-contain dark:hidden  transition-transform duration-300 hover:scale-110 glow-accent"
                   />
                   {/* Dark theme logo */}
                   <img
-                    src="/srkrcc-logo-dark.png"
+                    src="/srkrcc-logo.png"
                     alt="SRKR Coding Club Logo"
-                    className="w-104 h-104 object-contain hidden dark:block rounded-full transition-transform duration-300 hover:scale-110"
+                    className="w-104 h-104 object-contain hidden dark:block transition-transform duration-300 hover:scale-110 glow-accent"
                   />
                 </div>
               </div>
@@ -198,8 +198,8 @@ export default function HomePage() {
       </section>
 
       {/* Events Spotlight */}
-      <section className="py-20 bg-muted/30 relative overflow-hidden">
-        {/* Animated background */}
+      {/* <section className="py-20 bg-muted/30 relative overflow-hidden">
+        Animated background
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-32 h-32 bg-accent/5 rounded-full animate-pulse"></div>
           <div className="absolute bottom-10 left-10 w-24 h-24 bg-primary/5 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -212,7 +212,7 @@ export default function HomePage() {
             <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
           </div>
 
-          {/* Tab Navigation */}
+          Tab Navigation
           <div className="flex justify-center mb-8 reveal">
             <div className="bg-background rounded-lg p-1 shadow-sm border border-primary/20">
               
@@ -246,7 +246,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Tab Content */}
+          Tab Content
           <div className="mb-8">
             {activeTab === 'ongoing' && (
               <div className="grid lg:grid-cols-2 gap-8">
@@ -387,7 +387,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
       <section className="py-20 bg-muted/30 relative overflow-hidden">

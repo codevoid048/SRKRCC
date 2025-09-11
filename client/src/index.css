@@ -290,3 +290,9 @@
   background: hsl(var(--accent) / 0.8);
 }
 
+
+.glow-accent {
+  filter: drop-shadow(0 0 15px #ac8000
+  ); /* accent glow */
+}
+

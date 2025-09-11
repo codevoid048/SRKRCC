@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
+import { Button } from '../Components/ui/button';
 
 // Location Pin Icon
 const LocationIcon = () => (
-    <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
     </svg>
 );
 
 // Phone Icon
 const PhoneIcon = () => (
-    <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
     </svg>
 );
 
 // Email Icon
 const EmailIcon = () => (
-    <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
     </svg>
@@ -24,16 +25,16 @@ const EmailIcon = () => (
 
 // Clock Icon
 const ClockIcon = () => (
-    <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 10.586V6z" clipRule="evenodd" />
     </svg>
 );
 
 // Club Logo
 const ClubLogo = () => (
-    <div className="absolute top-4 right-4 bg-primary text-primary-foreground rounded-lg shadow-md w-20 h-16 overflow-hidden border-2 border-accent">
+    <div className="absolute top-4 right-4 bg-white text-primary-foreground rounded-lg shadow-md w-20 h-16 overflow-hidden">
         <img
-            src="/CC.jpeg"
+            src="/clublogolight.png"
             alt="SRKR Coding Club Logo"
             className="w-full h-full object-cover"
             onError={(e) => {
@@ -204,7 +205,7 @@ export default function Contact() {
             {/* Header Section */}
             <div className="bg-muted py-24 px-8">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h1 className="text-4xl font-bold gradient-text mb-3">Contact Us</h1>
+                    <h1 className="text-5xl font-bold gradient-text mb-3">Contact Us</h1>
                     <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
 
                     <p className="text-lg text-muted-foreground leading-relaxed">
@@ -294,21 +295,21 @@ export default function Contact() {
 
                         {/* Right Side: Contact Form */}
                         <div className="relative p-6 md:p-8 bg-card lg:col-span-2 min-h-[450px] flex flex-col justify-start">
-                            
+
                             <ClubLogo />
                             <h2 className="text-2xl font-bold text-card-foreground mb-6">Send Us a Message</h2>
                             <form onSubmit={handleSubmit} className="space-y-5 flex-1">
                                 <div>
                                     <label htmlFor="fullName" className="block text-xs font-semibold text-muted-foreground mb-1">Your Name</label>
-                                    <input type="text" id="fullName" name="fullName" value={formData.fullName} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-primary transition text-foreground" required />
+                                    <input type="text" id="fullName" name="fullName" value={formData.fullName} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-accent transition text-foreground" required />
                                 </div>
                                 <div>
                                     <label htmlFor="email" className="block text-xs font-semibold text-muted-foreground mb-1">Your Email</label>
-                                    <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-primary transition text-foreground" required />
+                                    <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-accent transition text-foreground" required />
                                 </div>
                                 <div>
                                     <label htmlFor="subject" className="block text-xs font-semibold text-muted-foreground mb-1">Subject</label>
-                                    <select id="subject" name="subject" value={formData.subject} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-primary transition text-foreground">
+                                    <select id="subject" name="subject" value={formData.subject} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-accent transition text-foreground">
                                         <option value="">Select a subject</option>
                                         <option value="General Enquiry">General Enquiry</option>
                                         <option value="Event Information">Event Information</option>
@@ -320,10 +321,12 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <label htmlFor="message" className="block text-xs font-semibold text-muted-foreground mb-1">Message</label>
-                                    <textarea id="message" name="message" rows="3" value={formData.message} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-primary transition text-foreground" required></textarea>
+                                    <textarea id="message" name="message" rows="3" value={formData.message} onChange={handleInputChange} className="w-full p-2 text-sm bg-input rounded-md border border-border focus:outline-none focus:ring-1 focus:ring-accent transition text-foreground" required></textarea>
                                 </div>
-                                <div>
-                                    <button type="submit" className="w-full bg-primary text-primary-foreground font-bold py-3 px-4 rounded-md hover:bg-primary/90 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-primary transition-colors duration-300 shadow-md text-sm">Submit</button>
+                                <div className='flex flex-row justify-center'>
+                                    <Button variant="formative" className="w-32">
+                                        Submit
+                                    </Button>
                                 </div>
                             </form>
                         </div>
