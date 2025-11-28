@@ -209,64 +209,70 @@ export default function PastIconCoderz() {
                                     Winners Details
                                 </h3>
                                 {selectedEvent === "2K24" ? (
-                                    <div className="grid mx-16">
-                                        <Card>
-                                            <CardContent className="p-6 bg-muted/50">
-                                                <p className="text-muted-foreground mb-2">
-                                                    <div className="flex items-center mb-3">
-                                                        <Award className="w-6 h-6 mr-2 text-yellow-500" />
-                                                        <span className="font-semibold text-foreground mr-2">1st Place: </span>
-                                                        {currentEvent.winners.members.first}{" "}
+                                    <div className="w-full max-w-2xl mx-auto">
+                                        <Card className="w-full">
+                                            <CardContent className="p-4 sm:p-6 bg-muted/50">
+                                                <div className="space-y-3">
+                                                    <div className="flex items-start gap-2">
+                                                        <Award className="w-5 h-5 sm:w-6 sm:h-6 mt-0.5 flex-shrink-0 text-yellow-500" />
+                                                        <div>
+                                                            <span className="font-semibold text-foreground text-sm sm:text-base">1st Place:</span>
+                                                            <p className="text-muted-foreground text-sm sm:text-base">{currentEvent.winners.members.first}</p>
+                                                        </div>
                                                     </div>
-                                                </p>
-                                                <p className="text-muted-foreground mb-2">
-                                                    <div className="flex items-center mb-3">
-                                                        <Award className="w-6 h-6 mr-2 text-white-900" />
-                                                        <span className="font-semibold text-foreground mr-2">2nd Place: </span>{" "}
-                                                        {currentEvent.winners.members.second} {" "}
+                                                    <div className="flex items-start gap-2">
+                                                        <Award className="w-5 h-5 sm:w-6 sm:h-6 mt-0.5 flex-shrink-0 text-gray-500" />
+                                                        <div>
+                                                            <span className="font-semibold text-foreground text-sm sm:text-base">2nd Place:</span>
+                                                            <p className="text-muted-foreground text-sm sm:text-base">{currentEvent.winners.members.second}</p>
+                                                        </div>
                                                     </div>
-                                                </p>
-                                                <p className="text-muted-foreground mb-">
-                                                    <div className="flex items-center mb-3">
-                                                        <Award className="w-6 h-6 mr-2 text-yellow-900" />
-                                                        <span className="font-semibold text-foreground mr-2">3rd Place: </span>{" "}
-                                                        {currentEvent.winners.members.third} {" "}
+                                                    <div className="flex items-start gap-2">
+                                                        <Award className="w-5 h-5 sm:w-6 sm:h-6 mt-0.5 flex-shrink-0 text-orange-500" />
+                                                        <div>
+                                                            <span className="font-semibold text-foreground text-sm sm:text-base">3rd Place:</span>
+                                                            <p className="text-muted-foreground text-sm sm:text-base">{currentEvent.winners.members.third}</p>
+                                                        </div>
                                                     </div>
-                                                </p>
+                                                </div>
                                             </CardContent>
                                         </Card>
                                     </div>
                                 ) : (
-                                    <div className="grid gap-6 md:grid-cols-2">
+                                    <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
                                         {/* Expert Category */}
-                                        <Card>
-                                            <CardContent className="p-6 bg-muted/50">
+                                        <Card className="w-full">
+                                            <CardContent className="p-4 sm:p-6 bg-muted/50">
                                                 <div className="flex items-center mb-3">
-                                                    <Award className="w-6 h-6 mr-2 text-yellow-500" />
-                                                    <h4 className="text-xl font-bold">Expert Category</h4>
+                                                    <Award className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0 text-yellow-500" />
+                                                    <h4 className="text-lg sm:text-xl font-bold">Expert Category</h4>
                                                 </div>
-                                                <p className="text-muted-foreground mb-2">
-                                                    <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.expert.first}
-                                                </p>
-                                                <p className="text-muted-foreground mb-4">
-                                                    <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.expert.second}
-                                                </p>
+                                                <div className="space-y-2">
+                                                    <p className="text-sm sm:text-base text-muted-foreground">
+                                                        <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.expert.first}
+                                                    </p>
+                                                    <p className="text-sm sm:text-base text-muted-foreground">
+                                                        <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.expert.second}
+                                                    </p>
+                                                </div>
                                             </CardContent>
                                         </Card>
 
                                         {/* Beginner Category */}
-                                        <Card>
-                                            <CardContent className="p-6 bg-muted/50">
+                                        <Card className="w-full">
+                                            <CardContent className="p-4 sm:p-6 bg-muted/50">
                                                 <div className="flex items-center mb-3">
-                                                    <Award className="w-6 h-6 mr-2 text-gray-500" />
-                                                    <h4 className="text-xl font-bold">Beginner Category</h4>
+                                                    <Award className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0 text-gray-500" />
+                                                    <h4 className="text-lg sm:text-xl font-bold">Beginner Category</h4>
                                                 </div>
-                                                <p className="text-muted-foreground mb-2">
-                                                    <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.beginner.first} 
-                                                </p>
-                                                <p className="text-muted-foreground mb-4">
-                                                    <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.beginner.second}
-                                                </p>
+                                                <div className="space-y-2">
+                                                    <p className="text-sm sm:text-base text-muted-foreground">
+                                                        <span className="font-semibold text-foreground">1st Place:</span> {currentEvent.winners.beginner.first}
+                                                    </p>
+                                                    <p className="text-sm sm:text-base text-muted-foreground">
+                                                        <span className="font-semibold text-foreground">2nd Place:</span> {currentEvent.winners.beginner.second}
+                                                    </p>
+                                                </div>
                                             </CardContent>
                                         </Card>
                                     </div>

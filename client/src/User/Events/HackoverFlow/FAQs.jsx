@@ -12,7 +12,7 @@ export const faqs = [
         {
             question: "Is there a registration fee?",
             answer:
-                "No, participation in HackOverflow is completely free. We provide food, beverages, and swag to all participants.",
+                "Yes, there is a registration fee of ₹850 per person. This fee covers food, beverages, swag, and all event materials for participants.",
         },
         {
             question: "What should I bring?",
@@ -23,10 +23,5 @@ export const faqs = [
             question: "How are the projects judged?",
             answer:
                 "Projects are judged based on innovation, technical complexity, design, practicality, and presentation. Our panel of judges includes industry professionals and faculty members.",
-        },
-        {
-            question: "Can I start working on my project before the hackathon?",
-            answer:
-                "No, all coding and design work must be done during the hackathon. You can, however, plan and brainstorm ideas beforehand.",
         },
     ]

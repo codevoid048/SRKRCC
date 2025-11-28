@@ -37,12 +37,12 @@ const Alumni = () => {
   const alumniData = [
     {
       year: "2025",
-      image: "/demo/Hackoverflow/photo1.jpg",
+      image: "/demo/Hackoverflow/photo1.webp",
       graduates: 62,
     },
     {
       year: "2024",
-      image: "/",
+      image: "/demo/Hackoverflow/photo2.webp",
       graduates: 48,
     },
   ]
@@ -152,12 +152,12 @@ const Alumni = () => {
           </button>
 
           {/* Download Button */}
-          <button
+          {/* <button
             onClick={downloadImage}
             className="absolute top-6 right-20 z-60 p-3 bg-orange-500/80 hover:bg-orange-600/90 rounded-full backdrop-blur-sm transition-all duration-300"
           >
             <Download className="w-6 h-6 text-white" />
-          </button>
+          </button> */}
 
           {/* Previous Button */}
           <button
@@ -295,7 +295,7 @@ const Alumni = () => {
                       />
 
                       {/* Download Icon */}
-                      <div className="absolute bottom-6 right-6 opacity-0 group-hover/item:opacity-100 transition-all duration-500 transform translate-x-4 translate-y-4 group-hover/item:translate-x-0 group-hover/item:translate-y-0">
+                      {/* <div className="absolute bottom-6 right-6 opacity-0 group-hover/item:opacity-100 transition-all duration-500 transform translate-x-4 translate-y-4 group-hover/item:translate-x-0 group-hover/item:translate-y-0">
                         <button
                           onClick={(e) => {
                             e.stopPropagation()
@@ -305,7 +305,7 @@ const Alumni = () => {
                         >
                           <Download className="w-5 h-5" />
                         </button>
-                      </div>
+                      </div> */}
 
 
 

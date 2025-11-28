@@ -84,7 +84,7 @@ const mockFlagshipEvents = [
         title: "HackOverFlow",
         description:
             "HackOverflow is our annual 24-hour hackathon where participants collaborate to turn ideas into impactful solutions. With mentorship, workshops, networking opportunities, and a vibrant coding environment, it’s a space to learn, build, and showcase talent while creating innovative solutions to real-world problems",
-        poster: "/demo/EventPosters/Hackoverflow2k24.png",
+        poster: "hackoverflow2025.webp",
         category: "Hackathon",
         details: [
             "24-hour coding hackathon",
@@ -122,38 +122,41 @@ const mockFlagshipEvents = [
 // Ongoing Events Section with horizontal layout
 const OngoingEventsSection = ({ events }) => {
     return (
-        <section className="w-full bg-gradient-to-t from-accent/30 to-transparent relative">
+        <section className="w-full bg-gradient-to-t from-accent/30 to-transparent relative py-16 px-4 mb-16 overflow-hidden">
             <div className="absolute top-64 right-1/4 w-8 h-8 bg-accent/10 rounded-full animate-float pointer-events-none" style={{ animationDelay: '1s' }}></div>
-            <div className="w-full h-72 overflow-hidden flex p-10">
-
-                <div className="w-1/3 h-68 relative flex items-center justify-center p-2">
-                    <img
-                        src={events[0].poster}
-                        alt={events[0].title}
-                        width="600"
-                        height="400"
-                        className="rounded-lg object-cover w-full"
-                    />
-                </div>
-                <div className="w-1/3 h-54 flex items-center justify-center">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    
+                    {/* Image Section */}
+                    <div className="flex justify-center lg:justify-start">
+                        <img
+                            src={events[0].poster}
+                            alt={events[0].title}
+                            className="rounded-2xl object-cover border shadow-2xl"
+                        />
+                    </div>
+                    
+                    {/* Content Section */}
+                    <div className="text-center lg:text-left">
+                        <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                             {events[0].title}
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-2">
-                            Details: {events[0].description}
+                        <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg">
+                            {events[0].description}
                         </p>
-                        <div className="text-gray-500 dark:text-gray-400 mb-2">
-                            LastDate to Register: {events[0].date}
+                        <div className="text-gray-500 dark:text-gray-400 mb-4 text-md">
+                            <span className="font-semibold">Last Date to Register:</span> {events[0].date}
                         </div>
                     </div>
-                </div>
-                <div className="w-1/3 h-64 flex items-center justify-center p-4">
-                    <a href="https://hackoverflow.srkrcodingclub.in" target="_blank" rel="noopener noreferrer">
-                        <Button variant="default">
-                            Register Now
-                        </Button>
-                    </a>
+                    
+                    {/* Button Section */}
+                    <div className="flex justify-center lg:justify-end">
+                        <a href="https://hackoverflow.srkrcodingclub.in" target="_blank" rel="noopener noreferrer">
+                            <Button variant="default" size="lg" className="px-8 py-3">
+                                Register Now
+                            </Button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

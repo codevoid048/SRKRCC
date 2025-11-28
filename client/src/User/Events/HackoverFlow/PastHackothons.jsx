@@ -6,17 +6,17 @@ import { Button } from '../../../Components/ui/button';
 
 
 const hackoverflowGalleryImages = [
-    { id: 1, url: '/demo/Hackoverflow/hk23b.jpg', alt: 'Team' },
-    { id: 2, url: '/demo/Hackoverflow/hk23g.png', alt: 'Team' },
-    { id: 3, url: '/demo/Hackoverflow/hk23h.png', alt: 'Team' },
+    { id: 1, url: '/demo/Hackoverflow/hk23b.webp', alt: 'Team' },
+    { id: 2, url: '/demo/Hackoverflow/hk23g.webp', alt: 'Team' },
+    { id: 3, url: '/demo/Hackoverflow/hk23h.webp', alt: 'Team' },
 
 
 ];
 const hackoverflow24GalleryImages = [
-    { id: 1, url: '/demo/Hackoverflow/photo1.jpg', alt: 'Teams' },
-    { id: 2, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Team' },
-    { id: 3, url: '/demo/Hackoverflow/photo3.jpg', alt: 'Team' },
-    { id: 4, url: '/demo/Hackoverflow/photo4.jpg', alt: 'Team' },
+    { id: 1, url: '/demo/Hackoverflow/photo1.webp', alt: 'Teams' },
+    { id: 2, url: '/demo/Hackoverflow/photo2.webp', alt: 'Team' },
+    { id: 3, url: '/demo/Hackoverflow/photo3.webp', alt: 'Team' },
+    { id: 4, url: '/demo/Hackoverflow/photo4.webp', alt: 'Team' },
 ];
 
 // Sample data for different event editions. This data would typically be fetched from an API.
@@ -47,12 +47,12 @@ const eventData = {
             },
         },
         gallery: [
-            { id: 1, url: '/demo/Hackoverflow/photo2.jpg', alt: 'Participants brainstorming' },
-            { id: 2, url: '/demo/Hackoverflow/photo7.jpg', alt: 'Judges evaluating projects' },
-            { id: 3, url: '/demo/Hackoverflow/photo3.jpg', alt: 'Award ceremony' },
-            { id: 4, url: '/demo/Hackoverflow/photo4.jpg', alt: 'Networking session' },
-            { id: 5, url: '/demo/Hackoverflow/photo5.jpg', alt: 'Team presentations' },
-            { id: 6, url: '/demo/Hackoverflow/photo6.jpg', alt: 'Hackathon venue' },
+            { id: 1, url: '/demo/Hackoverflow/photo2.webp', alt: 'Participants brainstorming' },
+            { id: 2, url: '/demo/Hackoverflow/photo7.webp', alt: 'Judges evaluating projects' },
+            { id: 3, url: '/demo/Hackoverflow/photo3.webp', alt: 'Award ceremony' },
+            { id: 4, url: '/demo/Hackoverflow/photo4.webp', alt: 'Networking session' },
+            { id: 5, url: '/demo/Hackoverflow/photo5.webp', alt: 'Team presentations' },
+            { id: 6, url: '/demo/Hackoverflow/photo6.webp', alt: 'Hackathon venue' },
         ],
         testimonials: [
             { author: 'Vasu', quote: 'An incredible experience! The mentors were so helpful, and the energy was fantastic. The collaboration and creativity throughout the event made it truly memorable.' },
@@ -62,9 +62,9 @@ const eventData = {
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // A placeholder video link
 
         sponsors: [
-            { id: 1, url: '/demo/Hackoverflow/edu expose.png', alt: 'Judges evaluating projects' },
-            { id: 2, url: '/demo/Hackoverflow/Nareshhostel.png', alt: 'Award ceremony' },
-            { id: 3, url: '/demo/Hackoverflow/Sp1.png', alt: 'Networking session' },
+            { id: 1, url: '/demo/Hackoverflow/edu expose.webp', alt: 'Judges evaluating projects' },
+            { id: 2, url: '/demo/Hackoverflow/Nareshhostel.webp', alt: 'Award ceremony' },
+            { id: 3, url: '/demo/Hackoverflow/Sp1.webp', alt: 'Networking session' },
         ],
     },
     '2K23': {
@@ -93,12 +93,12 @@ const eventData = {
             },
         },
         gallery: [
-            { id: 1, url: '/demo/Hackoverflow/hk23a.jpg', alt: 'Teams' },
-            { id: 2, url: '/demo/Hackoverflow/hk23b.jpg', alt: 'Team' },
-            { id: 3, url: '/demo/Hackoverflow/hk23f.jpg', alt: 'Team' },
-            { id: 4, url: '/demo/Hackoverflow/hk23d.png', alt: 'Team' },
-            { id: 5, url: '/demo/Hackoverflow/hk23c.png', alt: 'Team' },
-            { id: 6, url: '/demo/Hackoverflow/hk23e.png', alt: 'Team' },
+            { id: 1, url: '/demo/Hackoverflow/hk23a.webp', alt: 'Teams' },
+            { id: 2, url: '/demo/Hackoverflow/hk23b.webp', alt: 'Team' },
+            { id: 3, url: '/demo/Hackoverflow/hk23f.webp', alt: 'Team' },
+            { id: 4, url: '/demo/Hackoverflow/hk23d.webp', alt: 'Team' },
+            { id: 5, url: '/demo/Hackoverflow/hk23c.webp', alt: 'Team' },
+            { id: 6, url: '/demo/Hackoverflow/hk23e.webp', alt: 'Team' },
         ],
         testimonials: [
             { author: '', quote: 'Beyond the coding, HackOverflow 2k23 created an amazing atmosphere of innovation and collaboration. Meeting like-minded peers and brainstorming ideas together was the best part.' },
@@ -108,12 +108,12 @@ const eventData = {
         feedback: null,
         videoUrl: 'https://www.youtube.com/embed/q3J0oQ_3zQ', // Another placeholder video link
         sponsors: [
-            { id: 1, url: '/demo/Hackoverflow/hk23sp1.jpg', alt: 'Judges evaluating projects' },
-            { id: 2, url: '/demo/Hackoverflow/hk23sp2.png', alt: 'Award ceremony' },
-            { id: 3, url: '/demo/Hackoverflow/hk23sp1.jpg', alt: 'Networking session' },
-            { id: 4, url: '/demo/Hackoverflow/hk23sp2.png', alt: 'Award ceremony' },
-            { id: 5, url: '/demo/Hackoverflow/hk23sp1.jpg', alt: 'Networking session' },
-            { id: 6, url: '/demo/Hackoverflow/hk23sp2.png', alt: 'Award ceremony' },
+            { id: 1, url: '/demo/Hackoverflow/hk23sp1.webp', alt: 'Judges evaluating projects' },
+            { id: 2, url: '/demo/Hackoverflow/hk23sp2.webp', alt: 'Award ceremony' },
+            { id: 3, url: '/demo/Hackoverflow/hk23sp1.webp', alt: 'Networking session' },
+            { id: 4, url: '/demo/Hackoverflow/hk23sp2.webp', alt: 'Award ceremony' },
+            { id: 5, url: '/demo/Hackoverflow/hk23sp1.webp', alt: 'Networking session' },
+            { id: 6, url: '/demo/Hackoverflow/hk23sp2.webp', alt: 'Award ceremony' },
 
         ],
     },
@@ -240,29 +240,30 @@ export default function PastHackothons() {
                                     <Trophy className="mr-2 text-amber-500" />
                                     Winners Details
                                 </h3>
-                                <div className="grid gap-6 md:grid-cols-3">
+                                <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                                     {['first', 'second', 'third'].map((place, index) => {
                                         const winner = currentEvent.winners[place];
                                         const placeText = index === 0 ? '1st Place' : index === 1 ? '2nd Place' : '3rd Place';
                                         const placeIconColor = index === 0 ? 'text-amber-500' : index === 1 ? 'text-gray-500' : 'text-orange-500';
 
                                         return (
-                                            <Card key={place}>
-                                                <CardContent key={place} className="p-6">
+                                            <Card key={place} className="w-full">
+                                                <CardContent className="p-4 sm:p-6">
                                                     <div className="flex items-center mb-3">
-                                                        <Award className={`w-6 h-6 mr-2 ${placeIconColor}`} />
-                                                        <h4 className="text-xl font-bold">{placeText}</h4>
+                                                        <Award className={`w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0 ${placeIconColor}`} />
+                                                        <h4 className="text-lg sm:text-xl font-bold">{placeText}</h4>
                                                     </div>
-                                                    <p className="text-muted-foreground mb-2">
-                                                        <span className="font-semibold text-foreground">Team:</span> {winner.teamName}
-                                                    </p>
-                                                    <p className="text-muted-foreground mb-4">
-                                                        <span className="font-semibold text-foreground">Members:</span> {winner.members.join(', ')}
-                                                    </p>
-                                                    <p className="text-muted-foreground mb-4">
-                                                        <span className="font-semibold text-primary">College:</span> {winner.projectLink}
-                                                    </p>
-
+                                                    <div className="space-y-2">
+                                                        <p className="text-sm sm:text-base text-muted-foreground">
+                                                            <span className="font-semibold text-foreground">Team:</span> {winner.teamName}
+                                                        </p>
+                                                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                                                            <span className="font-semibold text-foreground">Members:</span> {winner.members.join(', ')}
+                                                        </p>
+                                                        <p className="text-sm sm:text-base text-muted-foreground">
+                                                            <span className="font-semibold text-primary">College:</span> {winner.projectLink}
+                                                        </p>
+                                                    </div>
                                                 </CardContent>
                                             </Card>
                                         );

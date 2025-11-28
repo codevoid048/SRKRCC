@@ -66,52 +66,52 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-background to-muted/50 py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-background to-muted/50 py-12 sm:py-16 lg:py-20 relative overflow-hidden flex items-center">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
-          <div className="absolute top-40 right-20 w-16 h-16 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-primary/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 bg-primary/10 rounded-full animate-float"></div>
+          <div className="absolute top-40 right-4 sm:right-20 w-10 h-10 sm:w-16 sm:h-16 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-20 left-1/4 w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side */}
-            <div className="space-y-6 reveal">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-white text-sm font-medium">
+            <div className="space-y-4 sm:space-y-6 reveal text-center lg:text-left">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-white text-xs sm:text-sm font-medium">
                 Learn - Build - Innovate
               </div>
-              <h1 className="text-5xl lg:text-5xl font-bold leading-tight">
-                SRKR{" "}
-                <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">&lt;Coding Club&gt;</span>{" "}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                SRKR{" "}<br />
+                <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text block sm:inline">&lt;Coding Club&gt;</span>{" "}
               </h1>
-              <p className="text-xl text-muted-foreground max-w-xl">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
                 Empowering students to enhance their coding skills, foster innovation, and build a community of tech enthusiasts.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="formative" size="xlg">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2">
+                <Button variant="formative" size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8">
                   <Link to="/events"> Explore Events </Link>
                 </Button>
-                <Button variant="outline" size="xlg">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8">
                   <Link to="/joinus" >Join Us</Link>
                 </Button>
               </div>
             </div>
 
             {/* Right Side */}
-            <div className="flex justify-center  lg:reveal ml-auto" style={{ animationDelay: '0.3s' }}>
+            <div className="flex justify-center lg:justify-end reveal order-first lg:order-last" style={{ animationDelay: '0.3s' }}>
               <div className="relative">
-                <div className="w-96 h-96 flex items-center justify-center">
+                <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center">
                   {/* Light theme logo */}
                   <img
                     src="/srkrcc-logo.png"
                     alt="SRKR Coding Club Logo"
-                    className="w-104 h-104 object-contain dark:hidden  transition-transform duration-300 hover:scale-110 "
+                    className="w-full h-full object-contain dark:hidden transition-transform duration-300 hover:scale-105 sm:hover:scale-110"
                   />
                   {/* Dark theme logo */}
                   <img
                     src="/srkrcc-logo.png"
                     alt="SRKR Coding Club Logo"
-                    className="w-104 h-104 object-contain hidden dark:block transition-transform duration-300 hover:scale-110 "
+                    className="w-full h-full object-contain hidden dark:block transition-transform duration-300 hover:scale-105 sm:hover:scale-110"
                   />
                 </div>
               </div>
@@ -191,198 +191,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Events Spotlight */}
-      {/* <section className="py-20 bg-muted/30 relative overflow-hidden">
-        Animated background
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-32 h-32 bg-accent/5 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-10 left-10 w-24 h-24 bg-primary/5 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 reveal">
-            <h2 className="text-4xl font-bold mb-4">
-              Event <span className="from-primary to-accent bg-gradient-to-r text-transparent bg-clip-text">Spotlight</span>
-            </h2>
-            <div className="w-28 h-1 bg-gradient-to-r from-accent to-orange-500 mx-auto rounded-full mb-4"></div>
-          </div>
-
-          Tab Navigation
-          <div className="flex justify-center mb-8 reveal">
-            <div className="bg-background rounded-lg p-1 shadow-sm border border-primary/20">
-              
-              <button
-                onClick={() => setActiveTab('upcoming')}
-                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'upcoming'
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'text-muted-foreground hover:text-foreground'
-                  }`}
-              >
-                Upcoming Events
-              </button>
-              <button
-                onClick={() => setActiveTab('ongoing')}
-                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'ongoing'
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'text-muted-foreground hover:text-foreground'
-                  }`}
-              >
-                Ongoing Events
-              </button>
-              <button
-                onClick={() => setActiveTab('flagship')}
-                className={`px-4 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'flagship'
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'text-muted-foreground hover:text-foreground'
-                  }`}
-              >
-                Flagship Events
-              </button>
-            </div>
-          </div>
-
-          Tab Content
-          <div className="mb-8">
-            {activeTab === 'ongoing' && (
-              <div className="grid lg:grid-cols-2 gap-8">
-                {[
-                  {
-                    title: "HackOverflow 2K25",
-                    image: "/placeholder.svg",
-                    status: "Ongoing",
-                    statusColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
-                    date: "October 18, 2025",
-                    description: "Join our flagship hackathon event and showcase your innovative solutions to real-world problems."
-                  },
-                  {
-                    title: "Full Stack Web Development Course",
-                    image: "/placeholder.svg",
-                    status: "Ongoing",
-                    statusColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
-                    date: "June 12, 2025",
-                    description: "Join our 3-month online course to gain certification and build real-world projects. Top performers get a chance for a paid internship."
-                  }
-                ].map((event, index) => (
-                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20 hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                    <img src={event.image} alt={event.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
-                    <div className="flex items-start justify-between mb-3">
-                      <h4 className="text-lg font-bold">{event.title}</h4>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.statusColor}`}>
-                        {event.status}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-2">{event.date}</p>
-                    <p className="text-muted-foreground mb-3">{event.description}</p>
-                    <Link to="/events" className="inline-flex items-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
-                      <span className="group inline-flex items-center">
-                        Learn more
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
-                      </span>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {activeTab === 'upcoming' && (
-              <div className="grid lg:grid-cols-2 gap-8">
-                {[
-                  {
-                    title: "HackOverFlow 2K25",
-                    image: "/placeholder.svg",
-                    status: "Upcoming",
-                    statusColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
-                    date: "October 18, 2025",
-                    description: "Join our flagship hackathon event and showcase your innovative solutions to real-world problems."
-                  },
-                  {
-                    title: "Summer Coding Bootcamp",
-                    image: "/placeholder.svg",
-                    status: "Upcoming",
-                    statusColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
-                    date: "July 1-15, 2024",
-                    description: "Intensive two-week training program covering web development, machine learning, and more."
-                  }
-                ].map((event, index) => (
-                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20 hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                    <img src={event.image} alt={event.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
-                    <div className="flex items-start justify-between mb-3">
-                      <h4 className="text-lg font-bold">{event.title}</h4>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.statusColor}`}>
-                        {event.status}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-2">{event.date}</p>
-                    <p className="text-muted-foreground mb-3">{event.description}</p>
-                    <Link
-                      to="/events"
-                      className="inline-flex items-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-                    >
-                      <span className="group inline-flex items-center">
-                        Learn more
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
-                      </span>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {activeTab === 'flagship' && (
-              <div className="grid lg:grid-cols-2 gap-8">
-                {[
-                  {
-                    title: "HackOverflow",
-                    image: "/demo/EventPosters/Hackoverflow2k24.png",
-                    status: "Annual Hackathon Event",
-                    statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
-                    nextEvent: "Next Event: October, 2025",
-                    description: "Our annual hackathon where participants collaborate to create innovative solutions to real-world problems. Join us for 48 hours of coding, learning, and networking."
-                  },
-                  {
-                    title: "IconCoderZ",
-                    image: "/demo/EventPosters/iconcoderz-2k25.png",
-                    status: "Coding Competition Series",
-                    statusColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
-                    nextEvent: "Next Event: February, 2025",
-                    description: "A competitive programming contest designed to test your coding skills and problem-solving abilities. Participate in beginner and expert categories."
-                  }
-                ].map((event, index) => (
-                  <div key={index} className="bg-background rounded-lg p-6 shadow-sm border border-primary/20 hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                    <img src={event.image} alt={event.title} className="w-full h-64 object-cover mb-4 rounded-lg" />
-                    <div className="flex items-start justify-between mb-3">
-                      <h4 className="text-lg font-bold">{event.title}</h4>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.statusColor}`}>
-                        {event.status}
-                      </span>
-                    </div>
-                    <p className="text-sm text-primary font-medium mb-2">{event.nextEvent}</p>
-                    <p className="text-muted-foreground mb-3">{event.description}</p>
-                    <Link
-                      to="/events"
-                      className="inline-flex items-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-                    >
-                      <span className="group inline-flex items-center">
-                        Learn More
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
-                      </span>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="text-center reveal">
-            <Link
-              to="/events"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              View All Events
-            </Link>
-          </div>
-        </div>
-      </section> */}
 
       {/* Testimonials */}
       <section className="py-20 bg-muted/30 relative overflow-hidden">

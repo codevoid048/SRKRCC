@@ -152,7 +152,7 @@ const AffiliatesPage = () => {
         </section>
       </div>
 
-      <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 sm:py-12 md:py-24 bg-muted/50">
+      <div className="p-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 sm:py-12 md:py-24 bg-muted/50">
         {/* Statistics Cards */}
         <section className="mb-6 sm:mb-8">
           <Title value="Affiliate Statistics"/>
@@ -168,8 +168,7 @@ const AffiliatesPage = () => {
         </section>
       </div>
 
-      <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 md:py-16 ">
-        {/* Download Section */}
+      {/* <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 md:py-16 ">
         <section className=" rounded-lg mt-6 sm:mt-8 mb-6 sm:mb-8 ">
           <div className="text-center mb-4 sm:mb-6">
             <h2 className="text-xl sm:text-2xl md:text-5xl font-bold text-foreground mb-6 flex justify-center items-center gap-3">
@@ -203,7 +202,7 @@ const AffiliatesPage = () => {
             ))}
           </div>
         </section>
-      </div>
+      </div> */}
 
       <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 md:py-16 bg-muted/50">
         {/* Benefits Section */}
@@ -229,11 +228,11 @@ const AffiliatesPage = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-8 sm:mt-12 mb-6 sm:mb-8">
+          {/* <div className="text-center mt-8 sm:mt-12 mb-6 sm:mb-8">
             <button className="bg-accent text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md font-bold text-base sm:text-lg hover:bg-accent/90 w-full sm:w-auto">
               Apply for Affiliate Membership
-            </button>
-          </div>
+            </button> */}
+          {/* </div> */}
         </section>
       </div>
       <ScrollToTopButton/>
