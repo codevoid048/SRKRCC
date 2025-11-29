@@ -36,7 +36,7 @@ const mockAllEvents = [
         participants: "150+ Participants",
         prizes: "₹25,000",
         location: "SRKR Engineering College, Bhimavaram",
-        status: "upcoming",
+        status: "completed",
         category: "Competition",
         poster: "demo/EventPosters/iconcoderz-2k25.png",
     },

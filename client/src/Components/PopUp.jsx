@@ -3,7 +3,7 @@ import { Image } from "antd";
 
 const Popup = () => {
     const [isVisible, setIsVisible] = useState(true);
-    const [imageLoaded, setImageLoaded] = useState(false); // State to control image loading
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     useEffect(() => {
         setIsVisible(true);
@@ -14,24 +14,32 @@ const Popup = () => {
     };
 
     const handleImageLoad = () => {
-        setImageLoaded(true); // Set imageLoaded to true when the image has loaded
+        setImageLoaded(true);
     };
 
     if (!isVisible) return null;
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-            <div className="w-full max-w-md p-5 bg-white rounded-lg shadow-lg transition-transform transform scale-100 hover:scale-105">
-                {/* Popup content */}
+            <div className="relative w-full max-w-md p-5 bg-white rounded-lg shadow-lg transition-transform transform scale-100 hover:scale-105">
+
+                {/* X Close Button */}
+                <button
+                    onClick={handleClose}
+                    className="absolute top-3 right-3 text-gray-600 hover:text-black text-xl font-bold"
+                >
+                    ✕
+                </button>
+
                 <h2 className="mb-4 text-2xl font-bold text-center text-gray-800">Upcoming Event</h2>
 
                 {/* Image Section */}
-                <div className="relative mb-4 flex justify-center items-center w-full h-56 sm:h-72 max-h-80 overflow-hidden rounded-lg shadow-md"> {/* Responsive heights */}
+                <div className="relative mb-4 flex justify-center items-center w-full h-56 sm:h-72 max-h-80 overflow-hidden rounded-lg shadow-md">
                     <Image
                         src="/hackoverflow2025.webp"
                         className={`w-full h-full object-contain transition-all duration-500 ${imageLoaded ? 'filter-none' : 'filter blur'}`}
                         onLoad={handleImageLoad}
-                        style={{ transition: "filter 0.5s" }} // Add transition to filter property
+                        style={{ transition: "filter 0.5s" }}
                     />
                 </div>
 
@@ -41,13 +49,16 @@ const Popup = () => {
                     </li>
                 </ul>
 
+                {/* Register Button */}
                 <div className="mt-6 text-center">
-                    <button
-                        onClick={handleClose}
+                    <a
+                        href="https://hackoverflow.srkrcodingclub.in"   // <-- Replace with actual link
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="font-bold text-white px-6 py-2 rounded-lg bg-red-500 hover:bg-red-600 transition duration-300 ease-in-out shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     >
-                        Close
-                    </button>
+                        Register Now
+                    </a>
                 </div>
             </div>
         </div>
