@@ -84,14 +84,14 @@ export default function Footer() {
             ["/events/hackoverflow", "HackOverflow"],
             ["/events/iconcoderz", "IconCoderZ"],
             ["/events/hridayam", "Hridayam"],
-            ["/events/hridayam", "Carrer Guidence"],
+            // ["/events/hridayam", "Carrer Guidence"],
           ]} />
 
           <FooterColumn title="Minor Events" links={[
-            ["/events/hackoverflow", "CodeQuest"],
+            ["/events/codequest", "CodeQuest"],
             ["/events/edgecase", "EdgeCase"],
-            ["/events/iconcoderz", "C - Workshop"],
-            ["/events/codequest", "FSD Bootcamp"],
+            // ["/events/iconcoderz", "C - Workshop"],
+            // ["/events/codequest", "FSD Bootcamp"],
           ]} />
         </div>
 

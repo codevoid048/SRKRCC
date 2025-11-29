@@ -96,7 +96,7 @@ const Hackoverflow = () => {
                                 {schedule ? (
                                     <ul className="space-y-2 text-muted-foreground">
                                         <li>
-                                            <strong>December 19, 2025:</strong> Registration, Opening Ceremony, Hacking Begins, Presentations, Judging, Awards Ceremony
+                                            <strong>December 19, 2025:</strong> Registration, Opening Ceremony, Hackathon Begins, Presentations, Judging, Awards Ceremony
                                         </li>
                                         <li>
                                             <strong>Last Date to Register:</strong> December 13, 2025

@@ -2,7 +2,7 @@ export const faqs = [
         {
             question: "Who can participate in IconCoderZ?",
             answer:
-                "IconCoderZ is open to all college students. You can participate as an individual in either the beginner or expert category based on your coding experience.",
+                "IconCoderZ is an intra-level coding competition open to all students of SRKR Engineering College. You can participate individually in either the Beginner or Expert category, based on your coding experience.",
         },
         {
             question: "What programming languages are allowed?",
@@ -15,16 +15,16 @@ export const faqs = [
         },
         {
             question: "Is there a registration fee?",
-            answer: "No, participation in IconCoderZ is completely free for all students.",
+            answer: "Yes, there is a registration fee, which will be around ₹100 to ₹200.",
         },
         {
             question: "How are participants evaluated?",
             answer:
-                "Participants are evaluated based on the number of problems solved correctly and the time taken to solve them. Time penalties are applied for incorrect submissions.",
+                "Participants are evaluated based on the number of problems solved correctly and the time taken to solve them.",
         },
         {
             question: "Can I participate remotely?",
             answer:
-                "Yes, IconCoderZ has both in-person and online participation options. You can choose the mode that works best for you during registration.",
+                "No, IconCoderZ will be conducted in offline mode only. You must be present at the venue during the time of the competition.",
         },
     ]

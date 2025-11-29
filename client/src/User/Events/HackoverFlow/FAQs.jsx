@@ -2,12 +2,12 @@ export const faqs = [
         {
             question: "Who can participate in HackOverflow?",
             answer:
-                "HackOverflow is open to all college students. You can participate individually or as a team of up to 6 members.",
+                "HackOverflow is open to all college students. You can participate as a team of 4 to 6 members.",
         },
         {
             question: "Do I need to have coding experience?",
             answer:
-                "While some coding experience is helpful, we welcome participants of all skill levels. We have mentors available to help you throughout the event.",
+                "While some coding experience is helpful, we welcome participants of all skill levels.",
         },
         {
             question: "Is there a registration fee?",

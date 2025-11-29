@@ -53,6 +53,7 @@ import Contact from './Pages/Contact'
 import TeamPage from './Pages/TeamPage'
 import Admin from './Admin/Admin'
 import FlashNews from './Components/FlashNews'
+import Popup from './Components/PopUp'
 
 
 const App = () => {
@@ -71,6 +72,7 @@ const App = () => {
         <>
           <Navbar />
           <FlashNews />
+          <Popup/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/events" element={<EventsPage />} />
