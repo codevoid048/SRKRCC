@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../Components/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion'
 import { Button } from './ui/button'
 
 const FAQs = ({faqs}) => {

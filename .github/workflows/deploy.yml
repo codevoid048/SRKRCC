@@ -13,6 +13,7 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: github.repository == 'SRKRCC/SRKRCC'
     
     steps:
       - name: Checkout
@@ -23,13 +24,13 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: client/package-lock.json
+          cache-dependency-path: package-lock.json
       
       - name: Install dependencies
-        run: cd client && npm ci
+        run: npm ci
       
       - name: Build project
-        run: cd client && npm run build
+        run: npm run build
       
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
@@ -37,5 +38,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: srkrcc
-          directory: client/dist
+          directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

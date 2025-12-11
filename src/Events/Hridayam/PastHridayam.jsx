@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { CalendarCheck, Image, Users, Quote, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Card, CardContent } from '../../../Components/ui/card';
-import { Button } from '../../../Components/ui/button';
+import { Card, CardContent } from '../../Components/ui/card';
+import { Button } from '../../Components/ui/button';
 
 // Sample data for the gallery images from the Hridayam component
 const hridayamGalleryImages = [

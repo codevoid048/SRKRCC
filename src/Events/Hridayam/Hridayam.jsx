@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Image, MapPin, Users, Home, Sun, Heart } from 'lucide-react';
-import { Badge } from '../../../Components/ui/badge';
-import { Card, CardContent } from '../../../Components/ui/card';
-import { Button } from '../../../Components/ui/button';
+import { Badge } from '../../Components/ui/badge';
+import { Card, CardContent } from '../../Components/ui/card';
+import { Button } from '../../Components/ui/button';
 import { Link } from "react-router-dom";
 import HridayamPastEvents from './PastHridayam';
-import ScrollToTopButton from '../../../Components/ScrollToTop';
+import ScrollToTopButton from '../../Components/ScrollToTop';
 
 
 const Hridayam = () => {

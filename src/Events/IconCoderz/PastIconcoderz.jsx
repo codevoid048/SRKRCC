@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { CalendarCheck, FileText, Trophy, Users, Image, Quote, Youtube, Link, Award, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Card, CardContent } from '../../../Components/ui/card';
-import { Button } from '../../../Components/ui/button';
+import { Card, CardContent } from '../../Components/ui/card';
+import { Button } from '../../Components/ui/button';
 
 
 const iconcoderzGalleryImages = [

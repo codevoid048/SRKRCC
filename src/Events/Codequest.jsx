@@ -1,10 +1,10 @@
 import { Calendar, Image, MapPin, Trophy, Users, TrendingUp, Globe, CheckCircle, Star, Clock,Award,BarChart2,Gift } from 'lucide-react'
-import { Badge } from '../../Components/ui/badge'
-import { Card, CardContent } from '../../Components/ui/card'
-import { Button } from '../../Components/ui/button'
+import { Badge } from '../Components/ui/badge'
+import { Card, CardContent } from '../Components/ui/card'
+import { Button } from '../Components/ui/button'
 import { Link } from "react-router-dom";
 import { useEffect } from 'react';
-import ScrollToTopButton from '../../Components/ScrollToTop';
+import ScrollToTopButton from '../Components/ScrollToTop';
 
 
 const schedule = null;

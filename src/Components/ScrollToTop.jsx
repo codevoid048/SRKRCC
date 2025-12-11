@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
-import { Button } from '../Components/ui/button'; // Assuming Button component path
+import { Button } from './ui/button'; // Assuming Button component path
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
