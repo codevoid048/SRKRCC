@@ -52,7 +52,7 @@ const Popup = () => {
                 {/* Register Button */}
                 <div className="mt-6 text-center">
                     <a
-                        href="https://hackoverflow.srkrcodingclub.in"   // <-- Replace with actual link
+                        href="https://hackoverflow.srkrcodingclub.in"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="font-bold text-white px-6 py-2 rounded-lg bg-red-500 hover:bg-red-600 transition duration-300 ease-in-out shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500"

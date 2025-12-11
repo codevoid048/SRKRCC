@@ -20,7 +20,6 @@ export default function Registrations() {
 
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    // Load theme preference from localStorage on component mount
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {

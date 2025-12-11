@@ -19,7 +19,6 @@ const hackoverflow24GalleryImages = [
     { id: 4, url: '/demo/Hackoverflow/photo4.webp', alt: 'Team' },
 ];
 
-// Sample data for different event editions. This data would typically be fetched from an API.
 const eventData = {
     '2K24': {
         title: 'Hackoverflow 2K24',

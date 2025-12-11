@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
-import { Button } from './ui/button'; // Assuming Button component path
+import { Button } from './ui/button';
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
 
-    // Show button when page is scrolled down
+
     const toggleVisibility = () => {
-        if (window.scrollY > 300) { // Show button after scrolling 300px down
+        if (window.scrollY > 300) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
         }
     };
 
-    // Scroll to top smoothly
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -33,13 +32,13 @@ const ScrollToTopButton = () => {
         <Button
             size="icon"
             variant="formative"
-            className={`fixed bottom-4 right-4 rounded-full shadow-lg transition-opacity duration-300 w-14 h-14 ${ // Increased button size
+            className={`fixed bottom-4 right-4 rounded-full shadow-lg transition-opacity duration-300 w-14 h-14 ${
                 isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
             onClick={scrollToTop}
             aria-label="Scroll to top"
         >
-            <ArrowUp className="h-12 w-12" /> {/* Increased arrow icon size */}
+            <ArrowUp className="h-12 w-12" />
         </Button>
     );
 };

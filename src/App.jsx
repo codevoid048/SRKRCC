@@ -25,12 +25,10 @@ const App = () => {
   return (
     <div>
       {isAdminRoute ? (
-        // Admin routes 
         <Routes>
           <Route path="/admin/*" element={<Admin />} />
         </Routes>
       ) : (
-        // Normal user routes with Navbar & Footer
         <>
           <Navbar />
           <FlashNews />
@@ -44,7 +42,6 @@ const App = () => {
             <Route path="/events/codequest" element={<Codequest />} />
             <Route path="/events/edgecase" element={<Edgecase />} />
             <Route path="/alumni" element={<Alumni />} />
-            {/* <Route path="/team" element={<TeamPage />} /> */}
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/affiliates" element={<Affiliates />} />
             <Route path="/Joinus" element={<Registrations />} />

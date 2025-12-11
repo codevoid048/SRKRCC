@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Users, UserPlus, Award, Star, Code, Trophy, Camera, X, ChevronLeft, ChevronRight, Heart,User, Sparkles, Play } from 'lucide-react';
 
-// Header Component
 const Header = () => (
     <div className="relative overflow-hidden  dark:from-slate-900 dark:to-slate-800 bg-muted/50">
         <div className="absolute inset-0 "></div>
@@ -25,7 +24,6 @@ const Header = () => (
     </div>
 );
 
-// Convener Component
 const Convener = ({ convener }) => (
     <section>
         <div className="text-center mb-12">

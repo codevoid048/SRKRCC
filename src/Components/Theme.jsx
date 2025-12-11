@@ -5,7 +5,6 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState("light");
 
-  // Apply theme to <html>
   const applyTheme = (mode) => {
     document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(mode);
@@ -13,7 +12,6 @@ export default function ThemeToggle() {
     setTheme(mode);
   };
 
-  // On mount: use system preference or stored theme
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;

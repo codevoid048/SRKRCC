@@ -108,7 +108,6 @@ const AffiliatesPage = () => {
 
  
 
-  // Data check
   if (!Object.keys(affiliateStats).length) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center px-4">

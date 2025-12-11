@@ -103,11 +103,7 @@ const Hackoverflow = () => {
                                         </li>
                                     </ul>
                                 ) : (
-                                    // <div className="flex h-32 items-center justify-center">
-                                    //     <span className="rounded-full bg-primary/10 px-6 py-3 text-primary text-lg font-semibold shadow-md">
-                                    //         🚀 Schedule Announcing Soon
-                                    //     </span>
-                                    // </div>
+
                                     <div className=" bg-primary/10  flex h-40 flex-col items-center justify-center rounded-lg">
                                         <Calendar className="mb-2 h-10 w-10  text-muted-foreground/50" />
                                         <span className=" text-primary text-xl font-semibold">Schedule Announcing Soon...</span>
@@ -159,11 +155,7 @@ const Hackoverflow = () => {
                                         </li>
                                     </ul>
                                 ) : (
-                                    // <div className="flex h-32 items-center justify-center">
-                                    //     <span className="rounded-full bg-primary/10 px-8 py-3 text-primary font-semibold shadow-sm">
-                                    //         Prizes & Rewards Announce Soon......
-                                    //     </span>
-                                    // </div>
+
                                     <div className="mt-8 bg-primary/10  flex h-40 flex-col items-center justify-center rounded-lg">
                                         <Trophy className="mb-2 h-10 w-10  text-muted-foreground/50" />
                                         <span className=" text-primary text-xl font-semibold">Prizes & Rewards Announce Soon......</span>

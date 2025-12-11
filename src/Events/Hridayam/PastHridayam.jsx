@@ -3,7 +3,6 @@ import { CalendarCheck, Image, Users, Quote, MapPin, ChevronLeft, ChevronRight }
 import { Card, CardContent } from '../../Components/ui/card';
 import { Button } from '../../Components/ui/button';
 
-// Sample data for the gallery images from the Hridayam component
 const hridayamGalleryImages = [
     { id: 1, url: '/demo/Hridayam/photo1.jpg', alt: 'Event moment 1' },
     { id: 2, url: '/demo/Hridayam/photo2.jpg', alt: 'Event moment 2' },
@@ -14,7 +13,6 @@ const hridayamGalleryImages = [
     { id: 7, url: '/demo/Hridayam/photo7.jpg', alt: 'Event moment 7' },
 ];
 
-// Sample data for different event editions, similar to PastHackothons but for Hridayam.
 const hridayamEventData = {
     '2024': {
         title: 'Hridayam 2024',

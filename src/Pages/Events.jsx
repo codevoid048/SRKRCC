@@ -119,7 +119,6 @@ const mockFlagshipEvents = [
     },
 ];
 
-// Ongoing Events Section with horizontal layout
 const OngoingEventsSection = ({ events }) => {
     return (
         <section className="w-full bg-gradient-to-t from-accent/30 to-transparent relative py-16 px-4 mb-16 overflow-hidden">
@@ -169,10 +168,9 @@ const AllEventsSection = ({ events }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Smooth scroll handling
     const scrollContainer = (direction) => {
         const container = scrollContainerRef.current;
-        const cardWidth = 384; // w-96 (384px)
+        const cardWidth = 384;
         const cardsPerView = Math.floor(container.offsetWidth / cardWidth);
         const maxIndex = Math.max(0, events.length - cardsPerView);
 
@@ -188,7 +186,6 @@ const AllEventsSection = ({ events }) => {
         });
     };
 
-    // Intersection Observer for visibility animation
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {

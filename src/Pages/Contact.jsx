@@ -4,21 +4,18 @@ import FAQs from '../Components/Faqs';
 import ScrollToTopButton from '../Components/ScrollToTop';
 import Title from '../Components/Title';
 
-// Location Pin Icon
 const LocationIcon = () => (
     <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
     </svg>
 );
 
-// Phone Icon
 const PhoneIcon = () => (
     <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
     </svg>
 );
 
-// Email Icon
 const EmailIcon = () => (
     <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -27,7 +24,6 @@ const EmailIcon = () => (
 );
 
 
-// Club Logo
 const ClubLogo = () => (
     <div className="absolute top-4 right-4 bg-white text-primary-foreground rounded-lg shadow-md w-20 h-16 overflow-hidden">
         <img
@@ -94,9 +90,7 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // In a real app, you would handle form submission here.
         console.log('Form submitted:', formData);
-        // Add a user-friendly message on submission
         alert('Thank you for your message! We will get back to you soon.');
     };
 

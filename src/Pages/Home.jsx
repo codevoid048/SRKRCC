@@ -18,7 +18,6 @@ import {
 import ScrollToTopButton from "../Components/ScrollToTop"
 import { Button } from "../Components/ui/button"
 
-// Counter component for animated numbers
 function Counter({ end, duration = 2000 }) {
   const [count, setCount] = useState(0)
 

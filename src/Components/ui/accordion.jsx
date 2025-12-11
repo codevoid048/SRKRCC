@@ -4,7 +4,7 @@ import React, { forwardRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
 
-// Inline `cn` utility if you aren't importing it from utils
+
 function cn(...classes) {
   return classes.filter(Boolean).join(" ")
 }

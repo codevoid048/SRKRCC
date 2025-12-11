@@ -20,7 +20,6 @@ const iconcoderz24GalleryImages = [
     { id: 5, url: '/demo/Iconcoderz/ic24e.jpg', alt: 'Coding in action' },
 
 ];
-// Sample data for different event editions. This data would typically be fetched from an API.
 const eventData = {
     '2K25': {
         title: 'IconCoderz 2K25',

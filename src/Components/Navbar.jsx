@@ -6,11 +6,10 @@ import ThemeToggle from "./Theme";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [eventsOpen, setEventsOpen] = useState(false); // used for mobile only
+    const [eventsOpen, setEventsOpen] = useState(false);
 
     const navLinks = [
         { name: "Home", href: "/" },
-        // { name: "Team", href: "/team" },
         { name: "Events", href: "/events" },
         { name: "Affiliates", href: "/affiliates" },
         { name: "Alumni", href: "/alumni" },
@@ -46,7 +45,7 @@ export default function Navbar() {
                 <nav className="hidden md:flex md:items-center md:gap-8">
                     {navLinks.map((link) => (
                         link.name === "Events" ? (
-                            <div key={link.name} className="relative group">
+                            <div key={link.name} className="relative group py-2">
                                 <button
                                     type="button"
                                     aria-haspopup="menu"
@@ -58,21 +57,23 @@ export default function Navbar() {
                                 </button>
                                 <div
                                     role="menu"
-                                    className="absolute left-0 top-full mt-2 hidden group-hover:block focus-within:block w-56 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-lg z-50"
+                                    className="absolute left-0 top-full pt-2 hidden group-hover:block focus-within:block z-50"
                                 >
-                                    <ul className="py-2">
-                                        {eventItems.map((item) => (
-                                            <li key={item.name}>
-                                                <Link
-                                                    to={item.href}
-                                                    className="block px-3 py-2 text-sm text-muted-foreground dark:text-muted-foreground hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-primary"
-                                                    role="menuitem"
-                                                >
-                                                    {item.name}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <div className="w-56 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-lg">
+                                        <ul className="py-2">
+                                            {eventItems.map((item) => (
+                                                <li key={item.name}>
+                                                    <Link
+                                                        to={item.href}
+                                                        className="block px-3 py-2 text-sm text-muted-foreground dark:text-muted-foreground hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-primary"
+                                                        role="menuitem"
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         ) : (
@@ -89,7 +90,6 @@ export default function Navbar() {
                     <JoinUs />
                 </nav>
                 
-                {/* Mobile-only buttons */}
                 <div className="flex items-center gap-2 md:hidden">
                     <ThemeToggle />
                     <button onClick={toggleMenu} className="text-accent">

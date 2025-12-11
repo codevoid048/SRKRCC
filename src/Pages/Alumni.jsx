@@ -120,7 +120,6 @@ const Alumni = () => {
     link.click()
   }
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (isFullScreen) {

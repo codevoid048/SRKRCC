@@ -39,12 +39,10 @@ export default function Affiliates() {
   }
 
   const handleFileUpload = (year) => {
-    // File upload logic here
     alert(`Upload XLS file for ${year}`)
   }
 
   const handleFileDownload = (fileName) => {
-    // File download logic here
     alert(`Downloading ${fileName}`)
   }
 
